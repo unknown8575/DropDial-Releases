@@ -17,6 +17,7 @@ license texts are in this folder.
 | pako | 1.x | MIT and Zlib | Deflate for TIFF and PNG |
 | gifenc | 1.0.3 | MIT | GIF encoding and palette quantization |
 | jsQR | 1.4.0 | Apache-2.0 | QR code reading |
+| @noble/ciphers (ChaCha20-Poly1305 only) | 2.4.0 | MIT (see `noble-ciphers.txt`) | Encryption on the Send from Phone page; vendored in `src/phone/vendor/noble-ciphers` from the npm package (sha512 `AnjFn0Jv92laAkvMrghlFZq4qQCIN/4DxFV/eooqtC2YTjB7kBeLMS2T9KJX4Dn+ZVXLOwK0lSgqDtx9gvxtiw==`) |
 | Papa Parse | 5.7.0 | MIT | Reading CSV bank statements |
 | Preact | 10.29.8 | MIT | Interface rendering |
 | htm | 3.1.1 | Apache-2.0 | Interface templates |
@@ -27,3 +28,21 @@ license texts are in this folder.
 FFmpeg source code: https://ffmpeg.org/download.html and the build information in the
 FFmpeg-*-build.txt files. FFmpeg runs as a separate program and can be replaced. libheif source:
 https://github.com/strukturag/libheif.
+
+## The website's video and audio tools
+
+The DropDial website's video and audio tools (/tools/) also use the components below, in the visitor's browser.
+Each is loaded only when a tool needs it, and their license texts are in this folder (/legal/).
+
+| Component | Version | License | Use | License text |
+|---|---|---|---|---|
+| Mediabunny | 1.66.0 | MPL-2.0 | Reading and writing MP4, MOV, WebM, MKV, MP3, M4A, WAV and OGG; drives the browser's own video and audio encoders (WebCodecs) | mediabunny.txt |
+| @mediabunny/mp3-encoder (LAME 3.100) | 1.66.0 | MPL-2.0 (LAME: LGPL-2.0 or later) | Making MP3 files | mediabunny.txt, lame.txt |
+| @mediabunny/aac-encoder (FFmpeg's AAC encoder, LGPL build) | 1.66.0 | MPL-2.0 (FFmpeg: LGPL-2.1 or later) | Making AAC sound where the browser has no AAC encoder | mediabunny.txt, ffmpeg-aac.txt |
+| @mediabunny/flac-encoder (libFLAC) | 1.66.0 | MPL-2.0 (libFLAC: BSD-3-Clause) | Making FLAC files | mediabunny.txt, libflac.txt |
+| gifenc | 1.0.3 | MIT | GIFs from videos (the app's copy) | gifenc.txt |
+
+LAME, FFmpeg's AAC encoder and libFLAC are WebAssembly builds made by Mediabunny's authors from unmodified sources
+(see lame.txt, ffmpeg-aac.txt and libflac.txt for the sources and build steps). Each runs from its own file
+(/tools/engine/media/mp3-worker.js, aac-worker.js, flac-worker.js) and can be replaced. No GPL code is used by the
+website.

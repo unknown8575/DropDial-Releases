@@ -74,13 +74,16 @@ export function extFor(f, to) {
 /** Read a file as text the way the app does (UTF-8, UTF-16 with a BOM, else Windows-1252). */
 export { decodeText } from '../../tools/engine/web/document.js';
 
-const MIME = { jpg: 'image/jpeg', png: 'image/png', webp: 'image/webp', gif: 'image/gif', bmp: 'image/bmp', tiff: 'image/tiff', ico: 'image/x-icon', avif: 'image/avif', svg: 'image/svg+xml', pdf: 'application/pdf', txt: 'text/plain', md: 'text/markdown', csv: 'text/csv', json: 'application/json', zip: 'application/zip', docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', xlsx: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' };
+const MIME = { jpg: 'image/jpeg', png: 'image/png', webp: 'image/webp', gif: 'image/gif', bmp: 'image/bmp', tiff: 'image/tiff', ico: 'image/x-icon', avif: 'image/avif', svg: 'image/svg+xml', pdf: 'application/pdf', txt: 'text/plain', md: 'text/markdown', csv: 'text/csv', json: 'application/json', zip: 'application/zip', docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', xlsx: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+  mp4: 'video/mp4', mov: 'video/quicktime', webm: 'video/webm', mkv: 'video/x-matroska', m4a: 'audio/mp4', mp3: 'audio/mpeg', wav: 'audio/wav', ogg: 'audio/ogg', opus: 'audio/ogg', flac: 'audio/flac' };
 export const mimeOf = (name) => MIME[(name.split('.').pop() || '').toLowerCase()] || 'application/octet-stream';
 /** Pictures every browser shows in an <img> by itself. */
 const NATIVE = new Set(['jpg', 'png', 'webp', 'gif', 'bmp', 'ico', 'svg', 'avif']);
 
-/** The app's size limits for one file (src/main/files.js LIMITS.bytes). */
-const MAX_BYTES = { image: 200 * MB, document: 500 * MB, text: 50 * MB };
+/** The app's size limits for one file (src/main/files.js LIMITS.bytes); video and audio: what a browser can hold. */
+const MAX_BYTES = { image: 200 * MB, document: 500 * MB, text: 50 * MB, video: 4096 * MB, audio: 1024 * MB };
+/** Phones get a note on files larger than this (video and audio: the result is made in the page's memory). */
+const PHONE_NOTE = { video: 1024 * MB, audio: 500 * MB };
 
 /** A friendly message for an error: the app's own words for problems a person can fix, plain words otherwise. */
 export function errorText(e) {
@@ -316,10 +319,10 @@ export function tool(def) {
       const ok = (def.kinds || []).some((k) => k === f.format || k === f.category || (k === 'text' && ['txt'].includes(f.format)));
       if (!ok) f.error = def.wrongKind ? def.wrongKind(f) : `${f.name} isn’t a file this tool takes.`;
       else {
-        const limit = f.category === 'image' ? MAX_BYTES.image : ['txt', 'csv', 'json'].includes(f.format) ? MAX_BYTES.text : MAX_BYTES.document;
-        if (f.size > limit) f.error = `This file is ${fmtBytes(f.size)}. The limit is ${fmtBytes(limit)}.`;
+        const limit = MAX_BYTES[f.category] || (['txt', 'csv', 'json'].includes(f.format) ? MAX_BYTES.text : MAX_BYTES.document);
+        if (f.size > limit) f.error = `This file is ${fmtBytes(f.size)}. The limit is ${fmtBytes(limit)}${f.category === 'video' || f.category === 'audio' ? ' in a browser; the DropDial app takes up to 8 GB' : ''}.`;
         else if (f.size === 0) f.error = 'This file is empty.';
-        else if (phoneSized() && f.size > 200 * MB) f.note = 'Large file: on a phone this may be slow, or need more memory than the browser allows.';
+        else if (phoneSized() && f.size > (PHONE_NOTE[f.category] || 200 * MB)) f.note = f.category === 'video' ? 'Large video: on a phone this may be slow, or need more memory than the browser allows. A computer works best.' : 'Large file: on a phone this may be slow, or need more memory than the browser allows.';
       }
       app.files.push(f); added.push(f);
     }
@@ -423,7 +426,7 @@ export function tool(def) {
     if (f.meta.w) meta.push(`${f.meta.w} × ${f.meta.h}`);
     if (f.meta.pages) meta.push(plural(f.meta.pages, 'page'));
     if (def.metaLine) meta.push(...def.metaLine(f).filter(Boolean));
-    const thumb = f.thumb ? h('img', { src: f.thumb, alt: '', loading: 'lazy', decoding: 'async' }) : ic(f.category === 'image' ? 'image' : f.format === 'pdf' ? 'file-text' : ['csv', 'xlsx', 'xls', 'json'].includes(f.format) ? 'table' : 'file');
+    const thumb = f.thumb ? h('img', { src: f.thumb, alt: '', loading: 'lazy', decoding: 'async' }) : ic(f.category === 'image' ? 'image' : f.category === 'video' ? 'film' : f.category === 'audio' ? 'music' : f.format === 'pdf' ? 'file-text' : ['csv', 'xlsx', 'xls', 'json'].includes(f.format) ? 'table' : 'file');
     const status = f.error ? h('p', { class: 'f-err', role: 'alert' }, ic('circle-alert'), h('span', null, f.error))
       : f.status === 'working' ? h('div', { class: 'f-prog' }, h('div', { class: 'bar' + (f.progress == null ? ' busy' : '') }, h('i', { style: f.progress != null ? `transform:scaleX(${f.progress})` : null })), h('span', { class: 'sr-only' }, 'Working on it'))
       : f.status === 'done' ? h('p', { class: 'f-ok' }, ic('circle-check'), h('span', null, f.done || 'Done'))
@@ -432,7 +435,7 @@ export function tool(def) {
     const extra = def.fileExtra ? def.fileExtra(f, app) : null;
     const row = h('li', { class: 'file' + (f.error ? ' bad' : '') + (f.status ? ' ' + f.status : ''), 'data-key': f.id },
       sortable ? h('button', { type: 'button', class: 'grip', 'aria-label': `Move ${f.name}. Drag, or use the arrow keys.`, title: 'Drag to reorder' }, ic('grip-vertical')) : null,
-      h('div', { class: 'f-thumb' + (f.category === 'image' ? '' : ' doc') + (f.meta.loading ? ' loading' : '') }, thumb),
+      h('div', { class: 'f-thumb' + (f.category === 'image' || f.category === 'video' ? '' : ' doc') + (f.meta.loading ? ' loading' : '') }, thumb),
       h('div', { class: 'f-main' }, h('p', { class: 'f-name' }, f.name), h('p', { class: 'f-meta' }, meta.join(' · ')), status, extra),
       app.phase !== 'running' ? h('button', { type: 'button', class: 'file-x', 'aria-label': `Remove ${f.name}`, title: 'Remove', onclick: () => remove(f) }, ic('x')) : null);
     return row;
@@ -478,9 +481,20 @@ export function tool(def) {
       return;
     }
     const label = def.action ? def.action(good, app.o, app) : 'Start';
+    const off = !good.length || !!reason || busy, note = reason || busy ? (busy ? 'Reading your files…' : reason) : '';
+    // The same button is kept while only its words change, so a press that lands as something else updates (a time
+    // box committing on blur, for example) still counts.
+    const btn = els.act.querySelector('.go');
+    if (btn && !els.act.querySelector('.act-prog')) {
+      if (btn.textContent !== label) btn.textContent = label;
+      btn.disabled = off;
+      let p = els.act.querySelector('.act-why');
+      if (note) { if (!p) { p = h('p', { class: 'act-why', 'aria-live': 'polite' }); els.act.append(p); } if (p.textContent !== note) p.textContent = note; } else if (p) p.remove();
+      return;
+    }
     fill(els.act, 
-      h('button', { type: 'button', class: 'btn btn-primary go', disabled: !good.length || !!reason || busy, onclick: go }, label),
-      reason || busy ? h('p', { class: 'act-why', 'aria-live': 'polite' }, busy ? 'Reading your files…' : reason) : null);
+      h('button', { type: 'button', class: 'btn btn-primary go', disabled: off, onclick: go }, label),
+      note ? h('p', { class: 'act-why', 'aria-live': 'polite' }, note) : null);
   }
 
   // ---------------------------------------------------------------- running
@@ -612,12 +626,13 @@ export function tool(def) {
       if (r.extra) rows.push(h('li', { class: 'res extra' }, r.extra));
     }
     for (const f of app.files.filter((x) => x.error)) rows.push(h('li', { class: 'res failed' }, h('div', { class: 'r-thumb' }, ic('circle-alert')), h('div', { class: 'r-main' }, h('p', { class: 'r-name' }, f.name), h('p', { class: 'f-err' }, f.error))));
+    const media = outs.length === 1 && def.preview !== false ? mediaView(outs[0], def.preview === 'picture') : null;
     const cmp = def.compare && app.results.find((r) => r.outputs.length === 1 && r.src && r.src.thumb && /^image\//.test(r.outputs[0].blob.type) && r.outputs[0].blob.type !== 'image/tiff' && r.outputs[0].blob.type !== 'image/x-icon');
     fill(els.results, 
       h('div', { class: 'res-head' },
         h('div', null, h('h2', { tabindex: '-1', id: 'res-title' }, outs.length ? ic('circle-check', 'ok') : null, head), sub ? h('p', { class: 'fine' }, sub) : null),
         h('div', { class: 'res-btns' }, allBtn, shareAll)),
-      cmp ? compareView(cmp) : null,
+      cmp ? compareView(cmp) : media,
       rows.length ? h('ul', { class: 'res-list' }, rows) : null,
       h('div', { class: 'res-foot' },
         (def.options || []).length ? h('button', { type: 'button', class: 'btn btn-quiet', onclick: again }, ic('sliders-horizontal'), 'Change options')
@@ -639,7 +654,7 @@ export function tool(def) {
     const pct = k === 0 && r.outputs.length === 1 && r.before && o.size < r.before && def.showSaving !== false ? ` (−${Math.round((1 - o.size / r.before) * 100)}%)` : '';
     const notes = [o.w ? `${o.w} × ${o.h} px` : '', k === 0 ? r.note : '', o.note].filter(Boolean).join(' · ');
     return h('li', { class: 'res' + (r.warn && k === 0 ? ' warn' : '') },
-      h('div', { class: 'r-thumb' }, isPic ? h('img', { src: o.url, alt: '', loading: 'lazy', decoding: 'async' }) : ic(o.name.endsWith('.pdf') ? 'file-text' : /\.(csv|xlsx|json)$/.test(o.name) ? 'table' : /\.zip$/.test(o.name) ? 'file-archive' : 'file')),
+      h('div', { class: 'r-thumb' }, isPic ? h('img', { src: o.url, alt: '', loading: 'lazy', decoding: 'async' }) : ic(o.name.endsWith('.pdf') ? 'file-text' : /\.(csv|xlsx|json)$/.test(o.name) ? 'table' : /\.zip$/.test(o.name) ? 'file-archive' : /^video\//.test(o.blob.type) ? 'film' : /^audio\//.test(o.blob.type) ? 'music' : 'file')),
       h('div', { class: 'r-main' },
         h('p', { class: 'r-name' }, o.name),
         h('p', { class: 'r-size' }, before + pct),
@@ -682,6 +697,19 @@ export function tool(def) {
   els.drop.addEventListener('pointerenter', () => engine.warm(), { once: true });
   els.input.addEventListener('change', () => engine.warm(), { once: true });
   return app;
+}
+
+/** A video or sound result, ready to play before it is downloaded. */
+function mediaView(o, picture = false) {
+  const video = /^video\//.test(o.blob.type), audio = /^audio\//.test(o.blob.type);
+  o.url = o.url || urlFor(o.blob);
+  if (picture && /^image\//.test(o.blob.type)) return h('figure', { class: 'media-out is-picture' }, h('img', { src: o.url, alt: `${o.name}, the result`, decoding: 'async' }));
+  if (!video && !audio) return null;
+  const el = h(video ? 'video' : 'audio', { src: o.url, controls: true, preload: 'metadata', playsinline: true, 'aria-label': `${o.name}: play the result` });
+  if (video) el.setAttribute('playsinline', '');
+  // A format this browser can't play (MKV in Safari, for example) still downloads; the player just goes away.
+  el.addEventListener('error', () => { const fig = el.closest('figure'); if (fig) fig.hidden = true; });
+  return h('figure', { class: 'media-out' + (video ? ' is-video' : ' is-audio') }, el);
 }
 
 /** Before / after: the result over the original, with a slider (keyboard and touch). */

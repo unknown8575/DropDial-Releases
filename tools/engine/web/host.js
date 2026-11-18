@@ -19,7 +19,7 @@ async function need(op) {
 }
 
 // Already-compressed results are stored as they are in a ZIP; text is compressed.
-const PACKED = /\.(jpe?g|png|webp|gif|avif|heic|pdf|zip|docx|xlsx|ico)$/i;
+const PACKED = /\.(jpe?g|png|webp|gif|avif|heic|pdf|zip|docx|xlsx|ico|mp4|mov|m4a|webm|mkv|mp3|ogg|opus|flac)$/i;
 let avif = null;
 
 /** Operations only the website needs (the desktop app has its own ways to do these). */
