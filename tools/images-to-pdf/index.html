@@ -1,0 +1,121 @@
+<!doctype html>
+<html data-base="../../" lang="en" data-os="mac">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1e1e1e" media="(prefers-color-scheme: dark)">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preload" href="../../fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../css/site.css">
+<script src="../../js/os.js"></script>
+<script type="module" src="../../js/site.js"></script>
+
+<link rel="stylesheet" href="../../css/tools.css">
+<title>Images to PDF: free, in your browser · DropDial</title>
+<meta name="description" content="Put photos, scans and screenshots into one PDF, in the order you choose, on A4, Letter or each picture’s own size. Free, with no install and no account. Your files never leave your device.">
+<meta property="og:title" content="Images to PDF · DropDial web tools">
+<meta property="og:description" content="One PDF from pictures, in order. Runs in your browser; nothing is uploaded.">
+<script type="module" src="../../js/tools/images-to-pdf.js"></script>
+</head>
+<body class="tool-page">
+<svg class="sprite" aria-hidden="true" focusable="false"><symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></symbol><symbol id="i-grip-vertical" viewBox="0 0 24 24"><circle cx="9" cy="12" r="1" /> <circle cx="9" cy="5" r="1" /> <circle cx="9" cy="19" r="1" /> <circle cx="15" cy="12" r="1" /> <circle cx="15" cy="5" r="1" /> <circle cx="15" cy="19" r="1" /></symbol><symbol id="i-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /> <circle cx="9" cy="9" r="2" /> <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></symbol><symbol id="i-file-text" viewBox="0 0 24 24"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="M10 9H8" /> <path d="M16 13H8" /> <path d="M16 17H8" /></symbol><symbol id="i-table" viewBox="0 0 24 24"><path d="M12 3v18" /> <rect width="18" height="18" x="3" y="3" rx="2" /> <path d="M3 9h18" /> <path d="M3 15h18" /></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /></symbol><symbol id="i-file-archive" viewBox="0 0 24 24"><path d="M13.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v11.5" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="M8 12v-1" /> <path d="M8 18v-2" /> <path d="M8 7V6" /> <circle cx="8" cy="20" r="2" /></symbol><symbol id="i-circle-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <line x1="12" x2="12" y1="8" y2="12" /> <line x1="12" x2="12.01" y1="16" y2="16" /></symbol><symbol id="i-circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></symbol><symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <path d="M12 16v-4" /> <path d="M12 8h.01" /></symbol><symbol id="i-triangle-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /> <path d="M12 9v4" /> <path d="M12 17h.01" /></symbol><symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol><symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6" /></symbol><symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6" /></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol><symbol id="i-share" viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/></symbol><symbol id="i-sliders-horizontal" viewBox="0 0 24 24"><path d="M10 5H3" /> <path d="M12 19H3" /> <path d="M14 3v4" /> <path d="M16 17v4" /> <path d="M21 12h-9" /> <path d="M21 19h-5" /> <path d="M21 5h-7" /> <path d="M8 10v4" /> <path d="M8 12H3" /></symbol><symbol id="i-refresh-cw" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /> <path d="M21 3v5h-5" /> <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /> <path d="M8 16H3v5" /></symbol><symbol id="i-rotate-cw" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" /> <path d="M21 3v5h-5" /></symbol><symbol id="i-rotate-ccw" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /> <path d="M3 3v5h5" /></symbol><symbol id="i-flip-horizontal-2" viewBox="0 0 24 24"><path d="M10 12H8" /> <path d="M16 12h-2" /> <path d="M22 12h-2" /> <path d="M4 12H2" /> <path d="M7.298 20.288A1 1 0 008 22h8a1 1 0 00.703-1.712l-3.991-3.99a1 1 0 00-1.424-.001z" /> <path d="M7.298 3.712A1 1 0 018 2h8a1 1 0 01.703 1.712l-3.991 3.99a1 1 0 01-1.424.001z" /></symbol><symbol id="i-flip-vertical-2" viewBox="0 0 24 24"><path d="M12 14v2" /> <path d="M12 20v2" /> <path d="M12 2v2" /> <path d="M12 8v2" /> <path d="M20.288 16.703A1 1 0 0022 16V8a1 1 0 00-1.712-.703l-3.99 3.991a1 1 0 00-.001 1.424z" /> <path d="M3.712 16.703A1 1 0 012 16V8a1 1 0 011.712-.703l3.99 3.991a1 1 0 01.001 1.424z" /></symbol><symbol id="i-trash-2" viewBox="0 0 24 24"><path d="M10 11v6" /> <path d="M14 11v6" /> <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" /> <path d="M3 6h18" /> <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /> <path d="M7 11V7a5 5 0 0 1 10 0v4" /></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /> <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></symbol><symbol id="i-external-link" viewBox="0 0 24 24"><path d="M15 3h6v6" /> <path d="M10 14 21 3" /> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></symbol><symbol id="i-undo-2" viewBox="0 0 24 24"><path d="M9 14 4 9l5-5" /> <path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11" /></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14" /> <path d="M12 5v14" /></symbol><symbol id="i-map-pin-off" viewBox="0 0 24 24"><path d="M12.75 7.09a3 3 0 0 1 2.16 2.16" /> <path d="M17.072 17.072c-1.634 2.17-3.527 3.912-4.471 4.727a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 1.432-4.568" /> <path d="m2 2 20 20" /> <path d="M8.475 2.818A8 8 0 0 1 20 10c0 1.183-.31 2.377-.81 3.533" /> <path d="M9.13 9.13a3 3 0 0 0 3.74 3.74" /></symbol><symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /> <circle cx="12" cy="10" r="3" /></symbol><symbol id="i-camera" viewBox="0 0 24 24"><path d="M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z" /> <circle cx="12" cy="13" r="3" /></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v3" /> <path d="M16 2v3" /> <rect x="3" y="3" width="18" height="18" rx="2" /> <path d="M3 9h18" /></symbol><symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /> <circle cx="12" cy="7" r="4" /></symbol><symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /> <circle cx="12" cy="12" r="3" /></symbol><symbol id="i-qr-code" viewBox="0 0 24 24"><rect width="5" height="5" x="3" y="3" rx="1" /> <rect width="5" height="5" x="16" y="3" rx="1" /> <rect width="5" height="5" x="3" y="16" rx="1" /> <path d="M21 16h-3a2 2 0 0 0-2 2v3" /> <path d="M21 21v.01" /> <path d="M12 7v3a2 2 0 0 1-2 2H7" /> <path d="M3 12h.01" /> <path d="M12 3h.01" /> <path d="M12 16v.01" /> <path d="M16 12h1" /> <path d="M21 12v.01" /> <path d="M12 21v-1" /></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /> <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></symbol><symbol id="i-indian-rupee" viewBox="0 0 24 24"><path d="M6 3h12" /> <path d="M6 8h12" /> <path d="m6 13 8.5 8" /> <path d="M6 13h3" /> <path d="M9 13c6.667 0 6.667-10 0-10" /></symbol></svg>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-nav" id="top-nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="../../" aria-label="DropDial home"><img src="../../icon.svg" alt="" width="28" height="28">DropDial</a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="../../#how">Features</a></li>
+        <li><a href="../../guide/">Guide</a></li>
+        <li><a href="../../tools/">Web tools</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary nav-dl" href="../../download/" data-magnetic>Download</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel" aria-label="Menu"><svg class="icon i-menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg><svg class="icon i-x" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></svg></button>
+  </div>
+  <div class="menu-panel" id="menu-panel">
+    <a href="../../#how">Features</a>
+    <a href="../../guide/">Guide</a>
+    <a href="../../tools/">Web tools</a>
+    <a href="../../download/">Download</a>
+    <a href="../../legal/">Terms &amp; Privacy</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../tools/">Web tools</a><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg><span aria-current="page">Images to PDF</span></nav>
+    <header class="tool-head">
+      <span class="th-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11.35 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v5.35" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="M14 19h6" /> <path d="M17 16v6" /></svg></span>
+      <div>
+        <h1>Images to PDF</h1>
+        <p class="lead">Put photos, scans and screenshots into one PDF, in the order you choose, on A4, Letter or each picture’s own size.</p>
+      </div>
+    </header>
+    <p class="private"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /></svg><span><b>Your files never leave this device.</b> DropDial’s web tools run in your browser; nothing is uploaded.</span></p>
+
+    <div class="tool" id="tool" data-phase="pick">
+      <p id="tool-live" class="sr-only" aria-live="polite"></p>
+      <input type="file" id="pick" class="sr-only" tabindex="-1" aria-hidden="true" accept="image/*,.heic,.heif,.avif,.tif,.tiff,.bmp,.ico,.svg">
+      <div class="tool-grid">
+        <div class="tool-main">
+          <div class="drop">
+            <span class="drop-art" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11.35 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v5.35" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="M14 19h6" /> <path d="M17 16v6" /></svg></span>
+            <p class="drop-title">Drop files here</p>
+            <button type="button" class="btn btn-primary pick-btn" aria-describedby="drop-what"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12" /> <path d="m17 8-5-5-5 5" /> <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /></svg><span class="pick-label">Choose files</span></button>
+            <p class="fine drop-what" id="drop-what"></p>
+            <noscript><p class="f-err">The web tools need JavaScript. Turn it on for this site, or use the desktop app.</p></noscript>
+          </div>
+          <div class="workspace" hidden>
+            <div class="stage"></div>
+            <ul class="file-list" aria-label="Your files"></ul>
+            <button type="button" class="btn btn-quiet btn-sm add-more" hidden><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14" /> <path d="M12 5v14" /></svg><span>Add more</span></button>
+          </div>
+        </div>
+        <aside class="tool-side" aria-label="Options">
+          <div class="opts"></div>
+          <div class="actbar"></div>
+        </aside>
+      </div>
+      <section class="results" hidden aria-labelledby="res-title"></section>
+    </div>
+
+    <section class="tool-info" aria-label="About this tool">
+      <div class="ti-card ti-private">
+        <span class="ti-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /> <path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg></span>
+        <h2>Private by design</h2>
+        <p>Your files never leave this device. DropDial’s web tools run in your browser with the same code as the DropDial app, so nothing is uploaded, and there’s no account and no tracking. Closing the page clears everything.</p>
+      </div>
+      <div class="ti-card ti-app">
+        <span class="ti-icon"><img src="../../icon.svg" alt="" width="28" height="28"></span>
+        <h2>Want the full toolbox?</h2>
+        <p>The free DropDial app for Mac and Windows does this and much more: up to 229 conversions, video and audio, 32 tools and the wheel.</p>
+        <p class="ti-links"><a class="textlink" href="../../download/">Get the app<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg></a><a class="textlink" href="../../guide/#imagesToPdf">How it works in the app<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg></a></p>
+      </div>
+    </section>
+
+    <section class="related" aria-labelledby="related-h">
+      <div class="related-head"><h2 id="related-h" class="sec-title">More web tools</h2><a class="textlink" href="../../tools/">All 19 tools<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg></a></div>
+      <ul class="tool-cards"><li><a class="tool-card" href="../../tools/convert-image/" data-words="convert image heic, png, webp, jpeg and more heic heif jpg jpeg png webp gif bmp tiff ico svg avif iphone photo change format"><span class="tc-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m16 3 4 4-4 4" /> <path d="M20 7H4" /> <path d="m8 21-4-4 4-4" /> <path d="M4 17h16" /></svg></span><span class="tc-text"><span class="tc-title">Convert image</span><span class="tc-blurb">HEIC, PNG, WebP, JPEG and more</span></span><svg class="icon tc-go" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg></a></li><li><a class="tool-card" href="../../tools/resize-image/" data-words="resize image pixels, percent or file size resize scale pixels width height smaller bigger dimensions kb mb"><span class="tc-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" /> <path d="M14 15H9v-5" /> <path d="M16 3h5v5" /> <path d="M21 3 9 15" /></svg></span><span class="tc-text"><span class="tc-title">Resize image</span><span class="tc-blurb">Pixels, percent or file size</span></span><svg class="icon tc-go" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg></a></li><li><a class="tool-card" href="../../tools/make-image-smaller/" data-words="make image smaller smaller jpeg, png and webp files compress shrink reduce file size kb mb optimise optimize"><span class="tc-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m15 15 6 6m-6-6v4.8m0-4.8h4.8" /> <path d="M9 19.8V15m0 0H4.2M9 15l-6 6" /> <path d="M15 4.2V9m0 0h4.8M15 9l6-6" /> <path d="M9 4.2V9m0 0H4.2M9 9 3 3" /></svg></span><span class="tc-text"><span class="tc-title">Make image smaller</span><span class="tc-blurb">Smaller JPEG, PNG and WebP files</span></span><svg class="icon tc-go" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg></a></li><li><a class="tool-card" href="../../tools/crop-rotate-image/" data-words="crop &amp; rotate shapes, quarter turns and flips crop rotate flip turn square instagram story ratio trim mirror"><span class="tc-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2v14a2 2 0 0 0 2 2h14" /> <path d="M18 22V8a2 2 0 0 0-2-2H2" /></svg></span><span class="tc-text"><span class="tc-title">Crop &amp; rotate</span><span class="tc-blurb">Shapes, quarter turns and flips</span></span><svg class="icon tc-go" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg></a></li></ul>
+    </section>
+  </div>
+</main>
+<footer class="site-foot">
+  <div class="wrap foot-inner">
+    <p class="copy">© 2026 Yash Gupta. All rights reserved.</p>
+    <ul class="foot-links">
+      <li><a href="../../download/">Download</a></li>
+      <li><a href="../../guide/">Guide</a></li>
+      <li><a href="../../tools/">Web tools</a></li>
+      <li><a href="../../legal/">Terms &amp; Privacy</a></li>
+      <li><a href="https://github.com/unknown8575/DropDial-Releases/releases" rel="noopener">Releases on GitHub</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

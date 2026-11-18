@@ -1,0 +1,165 @@
+<!doctype html>
+<html data-base="../" lang="en" data-os="mac">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1e1e1e" media="(prefers-color-scheme: dark)">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preload" href="../fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/site.css">
+<script src="../js/os.js"></script>
+<script type="module" src="../js/site.js"></script>
+
+<title>Download DropDial for Mac and Windows</title>
+<meta name="description" content="Download DropDial, a free file converter and toolbox for Mac (Apple silicon and Intel, macOS 12 or later) and Windows 10 and 11. Install steps and updates.">
+<script type="module" src="../js/download.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-nav" id="top-nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="../" aria-label="DropDial home"><img src="../icon.svg" alt="" width="28" height="28">DropDial</a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="../#how">Features</a></li>
+        <li><a href="../guide/">Guide</a></li>
+        <li><a href="../tools/">Web tools</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary nav-dl" href="../download/" data-magnetic>Download</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel" aria-label="Menu"><svg class="icon i-menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg><svg class="icon i-x" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></svg></button>
+  </div>
+  <div class="menu-panel" id="menu-panel">
+    <a href="../#how">Features</a>
+    <a href="../guide/">Guide</a>
+    <a href="../tools/">Web tools</a>
+    <a href="../download/">Download</a>
+    <a href="../legal/">Terms &amp; Privacy</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <header class="page-head">
+      <h1>Download DropDial</h1>
+      <p class="lead">Free for Mac and Windows. No account, nothing to sign up for.</p>
+      <p class="fine status" id="release-status" aria-live="polite"></p>
+    </header>
+
+    <section class="dl-card" aria-label="Download for this computer">
+      <div>
+        <div class="dl-variant" data-for="mac">
+          <h2>DropDial for Mac</h2>
+          <p class="note" data-arch-note>For Macs with Apple silicon (M1 or later).</p>
+          <div class="btns">
+            <a class="btn btn-primary" data-asset="mac-arm" data-magnetic href="https://github.com/unknown8575/DropDial-Releases/releases" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg><span data-label>Download for Mac (Apple silicon)</span></a>
+            <a class="textlink" data-asset="mac-x64" href="https://github.com/unknown8575/DropDial-Releases/releases" rel="noopener"><span data-label>Intel Mac? Download for Intel</span></a>
+          </div>
+          <p class="fine">Not sure? Apple menu → About This Mac: Apple silicon Macs show a Chip (M1, M2…), Intel Macs a Processor. macOS 12 or later.</p>
+        </div>
+        <div class="dl-variant" data-for="win">
+          <h2>DropDial for Windows</h2>
+          <p class="note">For Windows 10 and 11, 64-bit.</p>
+          <div class="btns"><a class="btn btn-primary" data-asset="win" data-magnetic href="https://github.com/unknown8575/DropDial-Releases/releases" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>Download for Windows</a></div>
+          <p class="fine">The Setup comes in a .zip file.</p>
+        </div>
+        <div class="dl-variant" data-for="mobile">
+          <h2>DropDial is a desktop app.</h2>
+          <p class="note">It runs on Mac and Windows. Open this page on your computer to download it, or send yourself the link.</p>
+          <div class="btns">
+            <button class="btn btn-primary" type="button" id="share-link" hidden><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/></svg>Share link</button>
+            <button class="btn btn-quiet" type="button" id="copy-link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /> <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg>Copy link</button>
+          </div>
+          <p class="fine" id="share-status" aria-live="polite"></p>
+          <div class="dl-web">
+            <p><b>On your phone right now?</b> DropDial’s web tools run in your browser, with nothing to install and nothing uploaded.</p>
+            <a class="btn btn-quiet" href="../tools/"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></svg>Open the web tools</a>
+          </div>
+        </div>
+        <div class="dl-variant" data-for="other">
+          <h2>DropDial is for Mac and Windows.</h2>
+          <p class="note">It doesn’t run on this system. Download it on your Mac or PC:</p>
+          <div class="btns">
+            <a class="btn btn-primary" data-asset="mac-arm" href="https://github.com/unknown8575/DropDial-Releases/releases" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>Mac (Apple silicon)</a>
+            <a class="btn btn-quiet" data-asset="win" href="https://github.com/unknown8575/DropDial-Releases/releases" rel="noopener">Windows</a>
+          </div>
+        </div>
+      </div>
+      <svg class="mini-wheel" viewBox="0 0 440 440" aria-hidden="true"><defs><linearGradient id="mgGlass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--glass-a)"/><stop offset="1" style="stop-color:var(--glass-b)"/></linearGradient><linearGradient id="mgHot" x1="0.1" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#ffab66"/><stop offset="0.45" stop-color="#ff6a12"/><stop offset="1" stop-color="#e94f00"/></linearGradient></defs><circle cx="220" cy="220" r="86" fill="url(#mgGlass)" stroke="var(--glass-edge)"/><path d="M 143.38 28.78 A 206 206 0 0 1 296.62 28.78 Q 304.90 32.31 301.19 40.51 L 264.10 122.51 Q 260.39 130.71 252.03 127.38 A 98 98 0 0 0 187.97 127.38 Q 179.61 130.71 175.90 122.51 L 138.81 40.51 Q 135.10 32.31 143.38 28.78 Z" fill="url(#mgGlass)" stroke="var(--glass-edge)"/><path d="M 321.73 40.87 A 206 206 0 0 1 417.27 160.68 Q 419.68 169.35 410.95 171.57 L 323.72 193.69 Q 314.99 195.91 312.38 187.30 A 98 98 0 0 0 272.44 137.21 Q 264.63 132.75 268.73 124.74 L 309.71 44.61 Q 313.81 36.60 321.73 40.87 Z" fill="url(#mgHot)" stroke="var(--glass-edge)"/><path d="M 423.48 187.85 A 206 206 0 0 1 389.38 337.25 Q 384.09 344.54 376.92 339.10 L 305.23 284.69 Q 298.06 279.25 303.17 271.84 A 98 98 0 0 0 317.42 209.38 Q 316.04 200.49 324.86 198.70 L 413.06 180.79 Q 421.88 178.99 423.48 187.85 Z" fill="url(#mgGlass)" stroke="var(--glass-edge)"/><path d="M 372.00 359.04 A 206 206 0 0 1 233.93 425.53 Q 224.94 425.94 224.73 416.94 L 222.57 326.97 Q 222.35 317.97 231.33 317.34 A 98 98 0 0 0 289.04 289.55 Q 295.13 282.92 302.03 288.70 L 371.03 346.49 Q 377.93 352.27 372.00 359.04 Z" fill="url(#mgGlass)" stroke="var(--glass-edge)"/><path d="M 206.07 425.53 A 206 206 0 0 1 68.00 359.04 Q 62.07 352.27 68.97 346.49 L 137.97 288.70 Q 144.87 282.92 150.96 289.55 A 98 98 0 0 0 208.67 317.34 Q 217.65 317.97 217.43 326.97 L 215.27 416.94 Q 215.06 425.94 206.07 425.53 Z" fill="url(#mgGlass)" stroke="var(--glass-edge)"/><path d="M 50.62 337.25 A 206 206 0 0 1 16.52 187.85 Q 18.12 178.99 26.94 180.79 L 115.14 198.70 Q 123.96 200.49 122.58 209.38 A 98 98 0 0 0 136.83 271.84 Q 141.94 279.25 134.77 284.69 L 63.08 339.10 Q 55.91 344.54 50.62 337.25 Z" fill="url(#mgGlass)" stroke="var(--glass-edge)"/><path d="M 22.73 160.68 A 206 206 0 0 1 118.27 40.87 Q 126.19 36.60 130.29 44.61 L 171.27 124.74 Q 175.37 132.75 167.56 137.21 A 98 98 0 0 0 127.62 187.30 Q 125.01 195.91 116.28 193.69 L 29.05 171.57 Q 20.32 169.35 22.73 160.68 Z" fill="url(#mgGlass)" stroke="var(--glass-edge)"/></svg>
+    </section>
+
+    <section class="chapter" style="padding-bottom:0" aria-labelledby="all-h">
+      <h2 id="all-h" class="sec-title">All downloads</h2>
+      <ul class="all-dl">
+        <li><div><div class="name">Mac with Apple silicon</div><div class="file" data-file="mac-arm">macOS 12 or later</div></div><a class="btn btn-quiet btn-sm" data-asset="mac-arm" href="https://github.com/unknown8575/DropDial-Releases/releases" rel="noopener" aria-label="Download for Mac with Apple silicon">Download</a></li>
+        <li><div><div class="name">Mac with Intel</div><div class="file" data-file="mac-x64">macOS 12 or later</div></div><a class="btn btn-quiet btn-sm" data-asset="mac-x64" href="https://github.com/unknown8575/DropDial-Releases/releases" rel="noopener" aria-label="Download for Mac with Intel">Download</a></li>
+        <li><div><div class="name">Windows</div><div class="file" data-file="win">Windows 10 and 11, 64-bit</div></div><a class="btn btn-quiet btn-sm" data-asset="win" href="https://github.com/unknown8575/DropDial-Releases/releases" rel="noopener" aria-label="Download for Windows">Download</a></li>
+      </ul>
+      <p class="fine" style="margin-top:12px">Every version is on <a href="https://github.com/unknown8575/DropDial-Releases/releases" rel="noopener">DropDial’s releases page on GitHub</a>.</p>
+    </section>
+
+    <section class="chapter install" id="install" aria-labelledby="install-h" style="padding-bottom:0">
+      <h2 id="install-h" class="sec-title">Install</h2>
+      <div class="segctl static" role="tablist" aria-label="Your computer">
+        <button type="button" role="tab" id="itab-mac" aria-controls="ipanel-mac" aria-selected="true" tabindex="0">Mac</button>
+        <button type="button" role="tab" id="itab-win" aria-controls="ipanel-win" aria-selected="false" tabindex="-1">Windows</button>
+      </div>
+      <div role="tabpanel" id="ipanel-mac" aria-labelledby="itab-mac" class="stack-sm">
+        <ol class="install-steps">
+          <li><span>Open the downloaded <b>.zip</b>. DropDial appears next to it.</span></li>
+          <li><span>Move <b>DropDial</b> to your Applications folder.</span></li>
+          <li><span>Open DropDial. If macOS says it can’t check the app, open <b>System Settings → Privacy &amp; Security</b>, scroll down and click <b>Open Anyway</b>.</span></li>
+        </ol>
+        <p class="fine">DropDial isn’t notarized by Apple yet, so macOS asks once. After that it opens like any other app.</p>
+      </div>
+      <div role="tabpanel" id="ipanel-win" aria-labelledby="itab-win" class="stack-sm" hidden>
+        <ol class="install-steps">
+          <li><span>Unzip the download: right-click it and choose <b>Extract All…</b></span></li>
+          <li><span>Run <b>DropDial Setup</b>.</span></li>
+          <li><span>If SmartScreen says “Windows protected your PC”, click <b>More info</b>, then <b>Run anyway</b>.</span></li>
+        </ol>
+        <p class="fine">The installer isn’t code-signed yet, so Windows asks once.</p>
+      </div>
+    </section>
+
+    <section class="chapter" aria-label="Updates and requirements">
+      <div class="two-col">
+        <div>
+          <h2 class="sec-title">Updates</h2>
+          <div class="stack-sm">
+            <p>DropDial looks for a new version once a day. When there is one, a bar at the top of the window offers Update, and the new version installs when you click Restart to update or quit DropDial.</p>
+            <p class="fine">To look right away, click Check now in Settings → General. You can turn the daily check off there too.</p>
+          </div>
+        </div>
+        <div>
+          <h2 class="sec-title">Requirements</h2>
+          <ul class="checklist">
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z" /> <path d="M20.054 15.987H3.946" /></svg><span><b>Mac:</b> macOS 12 or later, Apple silicon or Intel.</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2" /> <line x1="8" x2="16" y1="21" y2="21" /> <line x1="12" x2="12" y1="17" y2="21" /></svg><span><b>Windows:</b> Windows 10 or 11, 64-bit.</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /></svg><span><b>Free</b> for personal and work use. See <a href="../legal/">Terms &amp; Privacy</a>.</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="fine" style="margin-top:40px">This page asks GitHub for the latest version number and file links. Nothing about you is stored.</p>
+    </section>
+  </div>
+</main>
+<footer class="site-foot">
+  <div class="wrap foot-inner">
+    <p class="copy">© 2026 Yash Gupta. All rights reserved.</p>
+    <ul class="foot-links">
+      <li><a href="../download/">Download</a></li>
+      <li><a href="../guide/">Guide</a></li>
+      <li><a href="../tools/">Web tools</a></li>
+      <li><a href="../legal/">Terms &amp; Privacy</a></li>
+      <li><a href="https://github.com/unknown8575/DropDial-Releases/releases" rel="noopener">Releases on GitHub</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

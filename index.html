@@ -1,0 +1,300 @@
+<!doctype html>
+<html data-base="" lang="en" data-os="mac">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1e1e1e" media="(prefers-color-scheme: dark)">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+<script src="js/os.js"></script>
+<script type="module" src="js/site.js"></script>
+
+<title>DropDial: convert files by dropping them on a wheel</title>
+<meta name="description" content="DropDial is a free file converter and toolbox for Mac and Windows. Drop files, then pick a format on the glass wheel. Up to 229 conversions, 32 tools, Nearby sharing up to 10 GB. Everything runs on your computer.">
+<meta property="og:title" content="DropDial">
+<meta property="og:description" content="Drop files, then pick a format on the glass wheel. Free for Mac and Windows. Everything runs on your computer.">
+<meta property="og:image" content="https://unknown8575.github.io/DropDial-Releases/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="module" src="js/home.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-nav" id="top-nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="./" aria-label="DropDial home"><img src="icon.svg" alt="" width="28" height="28">DropDial</a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="./#how">Features</a></li>
+        <li><a href="guide/">Guide</a></li>
+        <li><a href="tools/">Web tools</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary nav-dl" href="download/" data-magnetic>Download</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel" aria-label="Menu"><svg class="icon i-menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg><svg class="icon i-x" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></svg></button>
+  </div>
+  <div class="menu-panel" id="menu-panel">
+    <a href="./#how">Features</a>
+    <a href="guide/">Guide</a>
+    <a href="tools/">Web tools</a>
+    <a href="download/">Download</a>
+    <a href="legal/">Terms &amp; Privacy</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero: the wheel is the product's signature, drawn with the app's own geometry -->
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1 id="hero-h" class="display">DropDial</h1>
+        <p class="lead">Drop files, then pick a format on the glass wheel.</p>
+        <p class="sub">Images, video, audio, PDFs, documents and sheets. Everything runs on your Mac or PC, with no account and no uploads.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="download/" data-magnetic><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg><span class="for-mac">Download for Mac</span><span class="for-win">Download for Windows</span><span class="for-mobile">Get it for your computer</span><span class="for-other">Download DropDial</span></a>
+          <a class="textlink" href="#how">See how it works<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg></a>
+        </div>
+        <p class="fine req"><span class="for-mac">Free for Mac with Apple silicon or Intel, macOS 12 or later.</span><span class="for-win">Free for Windows 10 and 11, 64-bit.</span><span class="for-mobile">A free desktop app for Mac and Windows.</span><span class="for-other">Free for Mac and Windows.</span></p>
+      </div>
+
+      <div class="wheel-stage" data-wheel>
+        <svg class="wheel" viewBox="0 0 440 440" role="listbox" tabindex="0" aria-label="Formats DropDial offers for photo.heic (a demo; use the arrow keys)" aria-activedescendant="seg-2">
+          <defs>
+            <linearGradient id="paneGlass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--glass-a)"/><stop offset="1" style="stop-color:var(--glass-b)"/></linearGradient>
+            <linearGradient id="paneHot" x1="0.1" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#ffab66"/><stop offset="0.45" stop-color="#ff6a12"/><stop offset="1" stop-color="#e94f00"/></linearGradient>
+            <radialGradient id="hubGlass" cx="0.42" cy="0.3" r="0.8"><stop offset="0" style="stop-color:var(--glass-a)"/><stop offset="1" style="stop-color:var(--glass-b)"/></radialGradient>
+          </defs>
+          <circle class="hub-disc" cx="220" cy="220" r="86"/>
+          <g class="ring"><g class="seg" data-i="0" style="--ox:0.00px;--oy:-7.00px;--d:0ms" role="option" aria-selected="false" aria-label="JPEG" id="seg-0"><g class="pop"><path class="pane" d="M 169.74 20.23 A 206 206 0 0 1 270.26 20.23 Q 278.94 22.61 276.36 31.23 L 250.61 117.47 Q 248.04 126.10 239.31 123.92 A 98 98 0 0 0 200.69 123.92 Q 191.96 126.10 189.39 117.47 L 163.64 31.23 Q 161.06 22.61 169.74 20.23 Z"/><g transform="translate(220.00 66.00)"><text class="lbl small" x="0" y="0">JPEG</text></g></g></g><g class="seg" data-i="1" style="--ox:4.11px;--oy:-5.66px;--d:22ms" role="option" aria-selected="false" aria-label="PNG" id="seg-1"><g class="pop"><path class="pane" d="M 296.76 28.84 A 206 206 0 0 1 378.09 87.92 Q 383.70 94.95 376.55 100.41 L 305.03 155.05 Q 297.88 160.51 292.09 153.62 A 98 98 0 0 0 260.85 130.92 Q 252.51 127.55 255.50 119.06 L 285.35 34.16 Q 288.34 25.67 296.76 28.84 Z"/><g transform="translate(310.52 95.41)"><text class="lbl small" x="0" y="0">PNG</text></g></g></g><g class="seg on" data-i="2" style="--ox:6.66px;--oy:-2.16px;--d:44ms" role="option" aria-selected="true" aria-label="WebP" id="seg-2"><g class="pop"><path class="pane" d="M 394.47 110.47 A 206 206 0 0 1 425.53 206.07 Q 425.94 215.06 416.94 215.27 L 326.97 217.43 Q 317.97 217.65 317.34 208.67 A 98 98 0 0 0 305.41 171.95 Q 300.64 164.32 308.05 159.20 L 382.11 108.06 Q 389.52 102.95 394.47 110.47 Z"/><g transform="translate(366.46 172.41)"><text class="lbl small" x="0" y="0">WebP</text></g></g></g><g class="seg" data-i="3" style="--ox:6.66px;--oy:2.16px;--d:66ms" role="option" aria-selected="false" aria-label="AVIF" id="seg-3"><g class="pop"><path class="pane" d="M 425.53 233.93 A 206 206 0 0 1 394.47 329.53 Q 389.52 337.05 382.11 331.94 L 308.05 280.80 Q 300.64 275.68 305.41 268.05 A 98 98 0 0 0 317.34 231.33 Q 317.97 222.35 326.97 222.57 L 416.94 224.73 Q 425.94 224.94 425.53 233.93 Z"/><g transform="translate(366.46 267.59)"><text class="lbl small" x="0" y="0">AVIF</text></g></g></g><g class="seg" data-i="4" style="--ox:4.11px;--oy:5.66px;--d:88ms" role="option" aria-selected="false" aria-label="GIF" id="seg-4"><g class="pop"><path class="pane" d="M 378.09 352.08 A 206 206 0 0 1 296.76 411.16 Q 288.34 414.33 285.35 405.84 L 255.50 320.94 Q 252.51 312.45 260.85 309.08 A 98 98 0 0 0 292.09 286.38 Q 297.88 279.49 305.03 284.95 L 376.55 339.59 Q 383.70 345.05 378.09 352.08 Z"/><g transform="translate(310.52 344.59)"><text class="lbl small" x="0" y="0">GIF</text></g></g></g><g class="seg" data-i="5" style="--ox:0.00px;--oy:7.00px;--d:110ms" role="option" aria-selected="false" aria-label="TIFF" id="seg-5"><g class="pop"><path class="pane" d="M 270.26 419.77 A 206 206 0 0 1 169.74 419.77 Q 161.06 417.39 163.64 408.77 L 189.39 322.53 Q 191.96 313.90 200.69 316.08 A 98 98 0 0 0 239.31 316.08 Q 248.04 313.90 250.61 322.53 L 276.36 408.77 Q 278.94 417.39 270.26 419.77 Z"/><g transform="translate(220.00 374.00)"><text class="lbl small" x="0" y="0">TIFF</text></g></g></g><g class="seg" data-i="6" style="--ox:-4.11px;--oy:5.66px;--d:132ms" role="option" aria-selected="false" aria-label="BMP" id="seg-6"><g class="pop"><path class="pane" d="M 143.24 411.16 A 206 206 0 0 1 61.91 352.08 Q 56.30 345.05 63.45 339.59 L 134.97 284.95 Q 142.12 279.49 147.91 286.38 A 98 98 0 0 0 179.15 309.08 Q 187.49 312.45 184.50 320.94 L 154.65 405.84 Q 151.66 414.33 143.24 411.16 Z"/><g transform="translate(129.48 344.59)"><text class="lbl small" x="0" y="0">BMP</text></g></g></g><g class="seg" data-i="7" style="--ox:-6.66px;--oy:2.16px;--d:154ms" role="option" aria-selected="false" aria-label="ICO" id="seg-7"><g class="pop"><path class="pane" d="M 45.53 329.53 A 206 206 0 0 1 14.47 233.93 Q 14.06 224.94 23.06 224.73 L 113.03 222.57 Q 122.03 222.35 122.66 231.33 A 98 98 0 0 0 134.59 268.05 Q 139.36 275.68 131.95 280.80 L 57.89 331.94 Q 50.48 337.05 45.53 329.53 Z"/><g transform="translate(73.54 267.59)"><text class="lbl small" x="0" y="0">ICO</text></g></g></g><g class="seg" data-i="8" style="--ox:-6.66px;--oy:-2.16px;--d:176ms" role="option" aria-selected="false" aria-label="PDF" id="seg-8"><g class="pop"><path class="pane" d="M 14.47 206.07 A 206 206 0 0 1 45.53 110.47 Q 50.48 102.95 57.89 108.06 L 131.95 159.20 Q 139.36 164.32 134.59 171.95 A 98 98 0 0 0 122.66 208.67 Q 122.03 217.65 113.03 217.43 L 23.06 215.27 Q 14.06 215.06 14.47 206.07 Z"/><g transform="translate(73.54 172.41)"><text class="lbl small" x="0" y="0">PDF</text></g></g></g><g class="seg" data-i="9" style="--ox:-4.11px;--oy:-5.66px;--d:198ms" role="option" aria-selected="false" aria-label="DOCX" id="seg-9"><g class="pop"><path class="pane" d="M 61.91 87.92 A 206 206 0 0 1 143.24 28.84 Q 151.66 25.67 154.65 34.16 L 184.50 119.06 Q 187.49 127.55 179.15 130.92 A 98 98 0 0 0 147.91 153.62 Q 142.12 160.51 134.97 155.05 L 63.45 100.41 Q 56.30 94.95 61.91 87.92 Z"/><g transform="translate(129.48 95.41)"><text class="lbl small" x="0" y="0">DOCX</text></g></g></g></g>
+        </svg>
+        <div class="hub" aria-hidden="true"><div class="hub-big">HEIC</div><div class="hub-cap">Convert to WebP</div></div>
+        <div class="file-chip" aria-hidden="true"><i>HEIC</i><span>photo.heic</span></div>
+        <button class="round-btn wheel-ctl" type="button" aria-pressed="false" aria-label="Pause the wheel animation"><svg class="icon i-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="14" y="3" width="5" height="18" rx="1" /> <rect x="5" y="3" width="5" height="18" rx="1" /></svg><svg class="icon i-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" /></svg></button>
+        <script type="application/json" id="hero-data">[{"name":"photo.heic","label":"HEIC","targets":["JPEG","PNG","WebP","AVIF","GIF","TIFF","BMP","ICO","PDF","DOCX"]},{"name":"clip.mov","label":"MOV","targets":["GIF","MP4","WebM","MKV","AVI","WMV","MP3","M4A","WAV"]},{"name":"voice memo.m4a","label":"M4A","targets":["MP3","WAV","FLAC","OGG","Opus","AIFF","WMA"]}]</script>
+      </div>
+    </div>
+  </section>
+
+  <!-- The one pinned chapter -->
+  <section class="chapter alt" id="how" aria-labelledby="how-h">
+    <div class="pin" data-pin>
+      <div class="pin-stage">
+        <div class="wrap how-grid">
+          <div class="how-copy">
+            <div class="chapter-head">
+              <h2 id="how-h" class="h2">Drop. Point. Click.</h2>
+              <p class="lead">One wheel for every format. Each file gets its own converted copy, and a file that fails doesn’t stop the rest.</p>
+            </div>
+            <ol class="steps">
+              <li class="step on"><h3>Drop your files</h3><p>On the DropDial window or the Drop Island at the top of your screen. Or press <span class="for-mac for-mobile for-other">⌘O</span><span class="for-win">Ctrl+O</span> to choose them.</p></li>
+              <li class="step"><h3>Point at a format</h3><p>The middle of the wheel says what will happen, like “Convert to WebP”.</p></li>
+              <li class="step"><h3>Click</h3><p>Find the new files next to the originals, or in Activity. Your originals never change.</p></li>
+            </ol>
+          </div>
+          <div class="frame settle" data-video data-name="convert" data-dark="convert-dark">
+            <video muted playsinline loop preload="none" aria-hidden="true" tabindex="-1"></video>
+            <p class="sr-only">Recording: three photos are dragged onto DropDial. The pointer moves over PNG, PDF and WebP on the wheel, and the middle says “Convert to WebP”. A click converts them, and Activity lists the results.</p>
+            <button class="media-btn" type="button" aria-label="Pause video"><svg class="icon i-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="14" y="3" width="5" height="18" rx="1" /> <rect x="5" y="3" width="5" height="18" rx="1" /></svg><svg class="icon i-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" /></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formats -->
+  <section class="chapter" id="formats" aria-labelledby="formats-h">
+    <div class="wrap">
+      <div class="chapter-head">
+        <h2 id="formats-h" class="h2"><span class="route-count">229</span> ways to convert on a Mac. <span class="route-count">221</span> on Windows.</h2>
+        <p class="lead">Pick a format to see what it can become. HEIC export uses macOS’s own encoder, so only a Mac offers it.</p>
+      </div>
+      <div class="finder" data-finder>
+        <div class="chips" role="group" aria-label="Kind of file"><button type="button" class="chip on" data-cat="image" aria-pressed="true">Images</button><button type="button" class="chip" data-cat="video" aria-pressed="false">Video</button><button type="button" class="chip" data-cat="audio" aria-pressed="false">Audio</button><button type="button" class="chip" data-cat="document" aria-pressed="false">Documents</button><button type="button" class="chip" data-cat="subtitle" aria-pressed="false">Subtitles</button></div>
+        <div class="chips fmt-chips" role="group" aria-label="Format"><button type="button" class="chip" data-fmt="jpg" aria-pressed="false">JPEG</button><button type="button" class="chip" data-fmt="png" aria-pressed="false">PNG</button><button type="button" class="chip" data-fmt="webp" aria-pressed="false">WebP</button><button type="button" class="chip" data-fmt="heic" aria-pressed="true">HEIC</button><button type="button" class="chip" data-fmt="avif" aria-pressed="false">AVIF</button><button type="button" class="chip" data-fmt="tiff" aria-pressed="false">TIFF</button><button type="button" class="chip" data-fmt="bmp" aria-pressed="false">BMP</button><button type="button" class="chip" data-fmt="gif" aria-pressed="false">GIF</button><button type="button" class="chip" data-fmt="ico" aria-pressed="false">ICO</button><button type="button" class="chip" data-fmt="svg" aria-pressed="false">SVG</button></div>
+        <div class="result" aria-live="polite"><h3>HEIC converts to</h3><ul class="tags"><li>JPEG</li><li>PNG</li><li>WebP</li><li>AVIF</li><li>GIF</li><li>TIFF</li><li>BMP</li><li>ICO</li><li>PDF</li><li>DOCX</li></ul></div>
+        <script type="application/json" id="format-data">{"cats":[{"id":"image","label":"Images"},{"id":"video","label":"Video"},{"id":"audio","label":"Audio"},{"id":"document","label":"Documents"},{"id":"subtitle","label":"Subtitles"}],"formats":[{"id":"jpg","label":"JPEG","cat":"image","to":[{"id":"png","label":"PNG","only":null},{"id":"webp","label":"WebP","only":null},{"id":"heic","label":"HEIC","only":"mac"},{"id":"avif","label":"AVIF","only":null},{"id":"gif","label":"GIF","only":null},{"id":"tiff","label":"TIFF","only":null},{"id":"bmp","label":"BMP","only":null},{"id":"ico","label":"ICO","only":null},{"id":"pdf","label":"PDF","only":null},{"id":"docx","label":"DOCX","only":null}]},{"id":"png","label":"PNG","cat":"image","to":[{"id":"jpg","label":"JPEG","only":null},{"id":"webp","label":"WebP","only":null},{"id":"heic","label":"HEIC","only":"mac"},{"id":"avif","label":"AVIF","only":null},{"id":"gif","label":"GIF","only":null},{"id":"tiff","label":"TIFF","only":null},{"id":"bmp","label":"BMP","only":null},{"id":"ico","label":"ICO","only":null},{"id":"pdf","label":"PDF","only":null},{"id":"docx","label":"DOCX","only":null}]},{"id":"webp","label":"WebP","cat":"image","to":[{"id":"jpg","label":"JPEG","only":null},{"id":"png","label":"PNG","only":null},{"id":"heic","label":"HEIC","only":"mac"},{"id":"avif","label":"AVIF","only":null},{"id":"gif","label":"GIF","only":null},{"id":"tiff","label":"TIFF","only":null},{"id":"bmp","label":"BMP","only":null},{"id":"ico","label":"ICO","only":null},{"id":"pdf","label":"PDF","only":null},{"id":"docx","label":"DOCX","only":null}]},{"id":"heic","label":"HEIC","cat":"image","to":[{"id":"jpg","label":"JPEG","only":null},{"id":"png","label":"PNG","only":null},{"id":"webp","label":"WebP","only":null},{"id":"avif","label":"AVIF","only":null},{"id":"gif","label":"GIF","only":null},{"id":"tiff","label":"TIFF","only":null},{"id":"bmp","label":"BMP","only":null},{"id":"ico","label":"ICO","only":null},{"id":"pdf","label":"PDF","only":null},{"id":"docx","label":"DOCX","only":null}]},{"id":"avif","label":"AVIF","cat":"image","to":[{"id":"jpg","label":"JPEG","only":null},{"id":"png","label":"PNG","only":null},{"id":"webp","label":"WebP","only":null},{"id":"heic","label":"HEIC","only":"mac"},{"id":"gif","label":"GIF","only":null},{"id":"tiff","label":"TIFF","only":null},{"id":"bmp","label":"BMP","only":null},{"id":"ico","label":"ICO","only":null},{"id":"pdf","label":"PDF","only":null},{"id":"docx","label":"DOCX","only":null}]},{"id":"tiff","label":"TIFF","cat":"image","to":[{"id":"jpg","label":"JPEG","only":null},{"id":"png","label":"PNG","only":null},{"id":"webp","label":"WebP","only":null},{"id":"heic","label":"HEIC","only":"mac"},{"id":"avif","label":"AVIF","only":null},{"id":"gif","label":"GIF","only":null},{"id":"bmp","label":"BMP","only":null},{"id":"ico","label":"ICO","only":null},{"id":"pdf","label":"PDF","only":null},{"id":"docx","label":"DOCX","only":null}]},{"id":"bmp","label":"BMP","cat":"image","to":[{"id":"jpg","label":"JPEG","only":null},{"id":"png","label":"PNG","only":null},{"id":"webp","label":"WebP","only":null},{"id":"heic","label":"HEIC","only":"mac"},{"id":"avif","label":"AVIF","only":null},{"id":"gif","label":"GIF","only":null},{"id":"tiff","label":"TIFF","only":null},{"id":"ico","label":"ICO","only":null},{"id":"pdf","label":"PDF","only":null},{"id":"docx","label":"DOCX","only":null}]},{"id":"gif","label":"GIF","cat":"image","to":[{"id":"jpg","label":"JPEG","only":null},{"id":"png","label":"PNG","only":null},{"id":"webp","label":"WebP","only":null},{"id":"heic","label":"HEIC","only":"mac"},{"id":"avif","label":"AVIF","only":null},{"id":"tiff","label":"TIFF","only":null},{"id":"bmp","label":"BMP","only":null},{"id":"ico","label":"ICO","only":null},{"id":"pdf","label":"PDF","only":null},{"id":"mp4","label":"MP4","only":null},{"id":"mov","label":"MOV","only":null},{"id":"webm","label":"WebM","only":null}]},{"id":"ico","label":"ICO","cat":"image","to":[{"id":"jpg","label":"JPEG","only":null},{"id":"png","label":"PNG","only":null},{"id":"webp","label":"WebP","only":null},{"id":"heic","label":"HEIC","only":"mac"},{"id":"avif","label":"AVIF","only":null},{"id":"gif","label":"GIF","only":null},{"id":"tiff","label":"TIFF","only":null},{"id":"bmp","label":"BMP","only":null},{"id":"pdf","label":"PDF","only":null},{"id":"docx","label":"DOCX","only":null}]},{"id":"svg","label":"SVG","cat":"image","to":[{"id":"jpg","label":"JPEG","only":null},{"id":"png","label":"PNG","only":null},{"id":"webp","label":"WebP","only":null},{"id":"pdf","label":"PDF","only":null}]},{"id":"pdf","label":"PDF","cat":"document","to":[{"id":"jpg","label":"JPEG","only":null},{"id":"png","label":"PNG","only":null},{"id":"docx","label":"DOCX","only":null},{"id":"txt","label":"TXT","only":null}]},{"id":"docx","label":"DOCX","cat":"document","to":[{"id":"pdf","label":"PDF","only":null},{"id":"txt","label":"TXT","only":null}]},{"id":"txt","label":"TXT","cat":"document","to":[{"id":"pdf","label":"PDF","only":null},{"id":"docx","label":"DOCX","only":null}]},{"id":"csv","label":"CSV","cat":"document","to":[{"id":"xlsx","label":"XLSX","only":null},{"id":"json","label":"JSON","only":null}]},{"id":"xlsx","label":"XLSX","cat":"document","to":[{"id":"pdf","label":"PDF","only":null},{"id":"csv","label":"CSV","only":null},{"id":"json","label":"JSON","only":null}]},{"id":"xls","label":"XLS","cat":"document","to":[{"id":"pdf","label":"PDF","only":null},{"id":"csv","label":"CSV","only":null},{"id":"xlsx","label":"XLSX","only":null},{"id":"json","label":"JSON","only":null}]},{"id":"json","label":"JSON","cat":"document","to":[{"id":"csv","label":"CSV","only":null},{"id":"xlsx","label":"XLSX","only":null}]},{"id":"mp4","label":"MP4","cat":"video","to":[{"id":"gif","label":"GIF","only":null},{"id":"mov","label":"MOV","only":null},{"id":"webm","label":"WebM","only":null},{"id":"mkv","label":"MKV","only":null},{"id":"avi","label":"AVI","only":null},{"id":"wmv","label":"WMV","only":null},{"id":"mp3","label":"MP3","only":null},{"id":"m4a","label":"M4A","only":null},{"id":"wav","label":"WAV","only":null}]},{"id":"mov","label":"MOV","cat":"video","to":[{"id":"gif","label":"GIF","only":null},{"id":"mp4","label":"MP4","only":null},{"id":"webm","label":"WebM","only":null},{"id":"mkv","label":"MKV","only":null},{"id":"avi","label":"AVI","only":null},{"id":"wmv","label":"WMV","only":null},{"id":"mp3","label":"MP3","only":null},{"id":"m4a","label":"M4A","only":null},{"id":"wav","label":"WAV","only":null}]},{"id":"mkv","label":"MKV","cat":"video","to":[{"id":"gif","label":"GIF","only":null},{"id":"mp4","label":"MP4","only":null},{"id":"mov","label":"MOV","only":null},{"id":"webm","label":"WebM","only":null},{"id":"avi","label":"AVI","only":null},{"id":"wmv","label":"WMV","only":null},{"id":"mp3","label":"MP3","only":null},{"id":"m4a","label":"M4A","only":null},{"id":"wav","label":"WAV","only":null}]},{"id":"webm","label":"WebM","cat":"video","to":[{"id":"gif","label":"GIF","only":null},{"id":"mp4","label":"MP4","only":null},{"id":"mov","label":"MOV","only":null},{"id":"mkv","label":"MKV","only":null},{"id":"avi","label":"AVI","only":null},{"id":"wmv","label":"WMV","only":null},{"id":"mp3","label":"MP3","only":null},{"id":"m4a","label":"M4A","only":null},{"id":"wav","label":"WAV","only":null}]},{"id":"avi","label":"AVI","cat":"video","to":[{"id":"gif","label":"GIF","only":null},{"id":"mp4","label":"MP4","only":null},{"id":"mov","label":"MOV","only":null},{"id":"webm","label":"WebM","only":null},{"id":"mkv","label":"MKV","only":null},{"id":"wmv","label":"WMV","only":null},{"id":"mp3","label":"MP3","only":null},{"id":"m4a","label":"M4A","only":null},{"id":"wav","label":"WAV","only":null}]},{"id":"wmv","label":"WMV","cat":"video","to":[{"id":"gif","label":"GIF","only":null},{"id":"mp4","label":"MP4","only":null},{"id":"mov","label":"MOV","only":null},{"id":"webm","label":"WebM","only":null},{"id":"mkv","label":"MKV","only":null},{"id":"avi","label":"AVI","only":null},{"id":"mp3","label":"MP3","only":null},{"id":"m4a","label":"M4A","only":null},{"id":"wav","label":"WAV","only":null}]},{"id":"mp3","label":"MP3","cat":"audio","to":[{"id":"m4a","label":"M4A","only":null},{"id":"wav","label":"WAV","only":null},{"id":"flac","label":"FLAC","only":null},{"id":"ogg","label":"OGG","only":null},{"id":"opus","label":"Opus","only":null},{"id":"aiff","label":"AIFF","only":null},{"id":"wma","label":"WMA","only":null}]},{"id":"m4a","label":"M4A","cat":"audio","to":[{"id":"mp3","label":"MP3","only":null},{"id":"wav","label":"WAV","only":null},{"id":"flac","label":"FLAC","only":null},{"id":"ogg","label":"OGG","only":null},{"id":"opus","label":"Opus","only":null},{"id":"aiff","label":"AIFF","only":null},{"id":"wma","label":"WMA","only":null}]},{"id":"wav","label":"WAV","cat":"audio","to":[{"id":"mp3","label":"MP3","only":null},{"id":"m4a","label":"M4A","only":null},{"id":"flac","label":"FLAC","only":null},{"id":"ogg","label":"OGG","only":null},{"id":"opus","label":"Opus","only":null},{"id":"aiff","label":"AIFF","only":null},{"id":"wma","label":"WMA","only":null}]},{"id":"flac","label":"FLAC","cat":"audio","to":[{"id":"mp3","label":"MP3","only":null},{"id":"m4a","label":"M4A","only":null},{"id":"wav","label":"WAV","only":null},{"id":"ogg","label":"OGG","only":null},{"id":"opus","label":"Opus","only":null},{"id":"aiff","label":"AIFF","only":null},{"id":"wma","label":"WMA","only":null}]},{"id":"ogg","label":"OGG","cat":"audio","to":[{"id":"mp3","label":"MP3","only":null},{"id":"m4a","label":"M4A","only":null},{"id":"wav","label":"WAV","only":null},{"id":"flac","label":"FLAC","only":null},{"id":"opus","label":"Opus","only":null},{"id":"aiff","label":"AIFF","only":null},{"id":"wma","label":"WMA","only":null}]},{"id":"opus","label":"Opus","cat":"audio","to":[{"id":"mp3","label":"MP3","only":null},{"id":"m4a","label":"M4A","only":null},{"id":"wav","label":"WAV","only":null},{"id":"flac","label":"FLAC","only":null},{"id":"ogg","label":"OGG","only":null},{"id":"aiff","label":"AIFF","only":null},{"id":"wma","label":"WMA","only":null}]},{"id":"aiff","label":"AIFF","cat":"audio","to":[{"id":"mp3","label":"MP3","only":null},{"id":"m4a","label":"M4A","only":null},{"id":"wav","label":"WAV","only":null},{"id":"flac","label":"FLAC","only":null},{"id":"ogg","label":"OGG","only":null},{"id":"opus","label":"Opus","only":null},{"id":"wma","label":"WMA","only":null}]},{"id":"wma","label":"WMA","cat":"audio","to":[{"id":"mp3","label":"MP3","only":null},{"id":"m4a","label":"M4A","only":null},{"id":"wav","label":"WAV","only":null},{"id":"flac","label":"FLAC","only":null},{"id":"ogg","label":"OGG","only":null},{"id":"opus","label":"Opus","only":null},{"id":"aiff","label":"AIFF","only":null}]},{"id":"srt","label":"SRT","cat":"subtitle","to":[{"id":"txt","label":"TXT","only":null},{"id":"vtt","label":"VTT","only":null}]},{"id":"vtt","label":"VTT","cat":"subtitle","to":[{"id":"txt","label":"TXT","only":null},{"id":"srt","label":"SRT","only":null}]}]}</script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools -->
+  <section class="chapter alt" id="tools" aria-labelledby="tools-h">
+    <div class="wrap">
+      <div class="chapter-head">
+        <h2 id="tools-h" class="h2">32 tools, one drop away.</h2>
+        <p class="lead">Edit photos, trim and join videos, clean up audio, sort out PDFs and see where your money went. Each tool opens with a large preview, and only the tools that fit your files are offered.</p>
+      </div>
+      <div class="segctl-wrap"><div class="segctl" role="tablist" aria-label="Tool groups"><span class="thumb" aria-hidden="true"></span><button type="button" role="tab" id="tab-image" data-group="image" aria-selected="false" tabindex="-1">Images</button><button type="button" role="tab" id="tab-video" data-group="video" aria-selected="true" tabindex="0">Video</button><button type="button" role="tab" id="tab-audio" data-group="audio" aria-selected="false" tabindex="-1">Audio</button><button type="button" role="tab" id="tab-pdf" data-group="pdf" aria-selected="false" tabindex="-1">PDF</button><button type="button" role="tab" id="tab-money" data-group="money" aria-selected="false" tabindex="-1">Money</button><button type="button" role="tab" id="tab-any" data-group="any" aria-selected="false" tabindex="-1">Any file</button></div></div>
+      <div class="tools-grid" role="tabpanel" aria-labelledby="tab-video" id="tool-panel">
+        <ul class="tool-list"><li><button type="button" data-tool="videoTrim" aria-pressed="false"><span class="tl-t">Trim video</span><span class="tl-d">Keep just the part you want</span></button></li><li><button type="button" data-tool="videoReframe" aria-pressed="false"><span class="tl-t">Crop &amp; reframe</span><span class="tl-d">Reels, Shorts, square or 16:9</span></button></li><li><button type="button" data-tool="videoSpeed" aria-pressed="false"><span class="tl-t">Change speed</span><span class="tl-d">From 0.25× to 4×</span></button></li><li><button type="button" data-tool="videoSplit" aria-pressed="false"><span class="tl-t">Cut into parts</span><span class="tl-d">Equal parts or every N seconds</span></button></li><li><button type="button" data-tool="videoMerge" aria-pressed="true"><span class="tl-t">Combine videos</span><span class="tl-d">One video from several clips</span></button></li><li><button type="button" data-tool="videoFrames" aria-pressed="false"><span class="tl-t">Save frames</span><span class="tl-d">Save stills as pictures</span></button></li><li><button type="button" data-tool="videoBlur" aria-pressed="false"><span class="tl-t">Blur areas</span><span class="tl-d">Hide faces, plates or text</span></button></li><li><button type="button" data-tool="videoGif" aria-pressed="false"><span class="tl-t">GIF &amp; sticker</span><span class="tl-d">GIF or animated WebP</span></button></li></ul>
+        <div class="tool-demo">
+          <div class="frame" id="tool-frame" data-video data-name="combine-videos">
+            <video muted playsinline loop preload="none" aria-hidden="true" tabindex="-1"></video>
+            <img alt="" hidden width="720" height="480" decoding="async">
+            <p class="sr-only" id="tool-desc">Recording: three clips are added to Combine videos, the order is changed, 720p is picked and the joined video is saved.</p>
+            <button class="media-btn" type="button" aria-label="Pause video"><svg class="icon i-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="14" y="3" width="5" height="18" rx="1" /> <rect x="5" y="3" width="5" height="18" rx="1" /></svg><svg class="icon i-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" /></svg></button>
+          </div>
+          <div class="tool-caption"><p id="tool-sum">Put two or more videos one after another in a single file.</p><a class="textlink" id="tool-guide" href="guide/#videoMerge">How to use<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg></a></div>
+        </div>
+        <script type="application/json" id="tool-data">{"groups":[{"id":"image","label":"Images","tools":[{"id":"photoAdjust","title":"Adjust photo","group":"image","blurb":"Light, colour and one-tap looks"},{"id":"photoBackdrop","title":"Background & frame","group":"image","blurb":"Colour, gradient or blur behind"},{"id":"photoCrop","title":"Crop & straighten","group":"image","blurb":"Fixed shapes and straighten"},{"id":"photoRedact","title":"Hide details","group":"image","blurb":"Cover, blur or pixelate details"},{"id":"photoResize","title":"Resize","group":"image","blurb":"Pixels, percent or file size"},{"id":"photoRotate","title":"Rotate & flip","group":"image","blurb":"Quarter turns and flips"},{"id":"imagesToPdf","title":"Images to PDF","group":"image","blurb":"One PDF from pictures, in order"},{"id":"photoCollage","title":"Collage","group":"image","blurb":"Grid, row, column or spotlight"},{"id":"readQR","title":"Read QR code","group":"image","blurb":"Links, text and UPI payments"}]},{"id":"video","label":"Video","tools":[{"id":"videoTrim","title":"Trim video","group":"video","blurb":"Keep just the part you want"},{"id":"videoReframe","title":"Crop & reframe","group":"video","blurb":"Reels, Shorts, square or 16:9"},{"id":"videoSpeed","title":"Change speed","group":"video","blurb":"From 0.25× to 4×"},{"id":"videoSplit","title":"Cut into parts","group":"video","blurb":"Equal parts or every N seconds"},{"id":"videoMerge","title":"Combine videos","group":"video","blurb":"One video from several clips"},{"id":"videoFrames","title":"Save frames","group":"video","blurb":"Save stills as pictures"},{"id":"videoBlur","title":"Blur areas","group":"video","blurb":"Hide faces, plates or text"},{"id":"videoGif","title":"GIF & sticker","group":"video","blurb":"GIF or animated WebP"}]},{"id":"audio","label":"Audio","tools":[{"id":"audioTrim","title":"Trim audio","group":"audio","blurb":"Cut the start and end, with fades"},{"id":"audioLevel","title":"Even out volume","group":"audio","blurb":"Podcast, music or voice loudness"},{"id":"audioStereo","title":"Stereo & mono","group":"audio","blurb":"Mono, swap or one side"},{"id":"audioBeep","title":"Beep out parts","group":"audio","blurb":"Bleep or mute parts"},{"id":"audioVideo","title":"Audio to video","group":"audio","blurb":"Waveform, bars or a picture"},{"id":"audioClean","title":"Reduce noise","group":"audio","blurb":"Light, medium or strong"}]},{"id":"pdf","label":"PDF","tools":[{"id":"pdfMerge","title":"Combine PDFs","group":"pdf","blurb":"Join PDFs in the order you choose"},{"id":"pdfSplit","title":"Split PDF","group":"pdf","blurb":"Pages, ranges or every N"},{"id":"pdfPages","title":"Arrange pages","group":"pdf","blurb":"Reorder, rotate and delete"},{"id":"pdfShrink","title":"Shrink PDF","group":"pdf","blurb":"Light or strong compression"},{"id":"pdfNumbers","title":"Page numbers","group":"pdf","blurb":"Six positions, three styles"},{"id":"pdfWatermark","title":"Watermark","group":"pdf","blurb":"Text, diagonal or tiled"}]},{"id":"money","label":"Money","tools":[{"id":"analyzeStatement","title":"Analyze bank statement","group":"money","blurb":"Where your money went, from CSV, Excel or PDF"}]},{"id":"any","label":"Any file","tools":[{"id":"shrink","title":"Make smaller","group":"any","blurb":"Smaller images, video, audio and PDFs"},{"id":"fileInfo","title":"Info & privacy","group":"any","blurb":"Details, location and private info"}]}],"media":{"add-files":"add-files","convert":"convert","wheel-modes":"wheel-modes","activity":"activity","search":"search","drop-island":"drop-island","shift-drag":"shift-drag","settings":"settings","photoAdjust":"photoAdjust","photoBackdrop":"photoBackdrop","photoCrop":"photoCrop","photoRedact":"photoRedact","photoResize":"photoResize","photoRotate":"photoRotate","imagesToPdf":"imagesToPdf","photoCollage":"photoCollage","readQR":"readQR","videoTrim":"videoTrim","videoReframe":"videoReframe","videoSpeed":"videoSpeed","videoSplit":"videoSplit","videoMerge":"videoMerge","videoFrames":"videoFrames","videoBlur":"videoBlur","videoGif":"videoGif","audioTrim":"audioTrim","audioLevel":"audioLevel","audioStereo":"audioStereo","audioBeep":"audioBeep","audioVideo":"audioVideo","audioClean":"audioClean","pdfMerge":"pdfMerge","pdfSplit":"pdfSplit","pdfPages":"pdfPages","pdfShrink":"pdfShrink","pdfNumbers":"pdfNumbers","pdfWatermark":"pdfWatermark","analyzeStatement":"analyzeStatement","shrink":"shrink","fileInfo":"fileInfo","file-actions":"file-actions","rename":"rename","zip":"zip","unzip":"unzip"},"summary":{"photoAdjust":"Light, contrast, colour, warmth, sharpness and vignette, with Auto and ready-made looks.","photoBackdrop":"Put a picture on a colour, a gradient or a blurred copy of itself, with padding, rounded corners and a shadow.","photoCrop":"Cut away the edges, freely or to a shape like 1:1, 4:5, 16:9 or a passport photo, and level a tilted picture.","photoRedact":"Hide faces, names or numbers with solid boxes, blur or pixelation.","photoResize":"Make one or many images smaller or bigger: by longest side, percentage, exact size or a target file size.","photoRotate":"Turn pictures a quarter turn, or mirror them. Works on many at once.","imagesToPdf":"Turn several images into one PDF, one image per page, in the order you choose.","photoCollage":"Arrange two or more pictures in a grid, row, column or spotlight layout.","readQR":"Read the link or text in a QR code from a screenshot or photo.","videoTrim":"Keep only the part of a video you want, or several parts joined into one.","videoReframe":"Reframe a video, for example to vertical 9:16 for Reels, Shorts and Status, or to square.","videoSpeed":"Speed a video up or slow it down, from 0.25× to 4×, with natural-sounding audio.","videoSplit":"Cut one video into equal parts, a part every few seconds, at marks you set, or into parts small enough to send.","videoMerge":"Put two or more videos one after another in a single file.","videoFrames":"Save still pictures from a video: frames you pick, or one every few seconds.","videoBlur":"Hide part of the picture, like a face, a licence plate or a name.","videoGif":"Turn part of a video into a GIF or an animated WebP sticker.","audioTrim":"Keep just the part of a recording you want, with gentle fades.","audioLevel":"Make quiet or loud recordings an even, standard loudness.","audioStereo":"Make stereo mono, swap left and right, keep one side, or change the balance.","audioBeep":"Cover words or noises with a beep or silence.","audioVideo":"Turn a song or recording into a video with a moving waveform, bars or a still picture.","audioClean":"Turn down hiss and background noise in recordings.","pdfMerge":"Join two or more PDFs into one document, in the order you choose.","pdfSplit":"Break a PDF into single pages, parts of a few pages, or the page ranges you type.","pdfPages":"Reorder, turn, delete, duplicate or add blank pages in a PDF.","pdfShrink":"Make PDFs smaller for email or upload.","pdfNumbers":"Add page numbers like “1”, “Page 1” or “1 of 12”.","pdfWatermark":"Write text like CONFIDENTIAL or DRAFT across every page.","analyzeStatement":"See where your money went: top payees and categories from your bank statement, as charts.","shrink":"Make pictures, videos, audio and PDFs smaller, all at once. Each file is made smaller the way that suits it.","fileInfo":"See what a file says about itself, edit its title or tags, and remove the location or all private details."}}</script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Web tools: the most-needed tools in the browser -->
+  <section class="chapter" id="web-tools" aria-labelledby="web-h">
+    <div class="wrap web-grid">
+      <div class="chapter-head">
+        <h2 id="web-h" class="h2">Use it in your browser.</h2>
+        <p class="lead">No install, and nothing uploaded. 19 of DropDial’s tools work right in the browser on an iPhone, Android phone, iPad or any computer.</p>
+        <a class="textlink" href="tools/">See all web tools<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg></a>
+      </div>
+      <ul class="tool-cards"><li><a class="tool-card" href="tools/convert-image/" data-words="convert image heic, png, webp, jpeg and more heic heif jpg jpeg png webp gif bmp tiff ico svg avif iphone photo change format"><span class="tc-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m16 3 4 4-4 4" /> <path d="M20 7H4" /> <path d="m8 21-4-4 4-4" /> <path d="M4 17h16" /></svg></span><span class="tc-text"><span class="tc-title">Convert image</span><span class="tc-blurb">HEIC, PNG, WebP, JPEG and more</span></span><svg class="icon tc-go" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg></a></li><li><a class="tool-card" href="tools/combine-pdfs/" data-words="combine pdfs join pdfs in the order you choose merge join combine pdf append"><span class="tc-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /> <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /> <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></svg></span><span class="tc-text"><span class="tc-title">Combine PDFs</span><span class="tc-blurb">Join PDFs in the order you choose</span></span><svg class="icon tc-go" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg></a></li><li><a class="tool-card" href="tools/make-image-smaller/" data-words="make image smaller smaller jpeg, png and webp files compress shrink reduce file size kb mb optimise optimize"><span class="tc-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m15 15 6 6m-6-6v4.8m0-4.8h4.8" /> <path d="M9 19.8V15m0 0H4.2M9 15l-6 6" /> <path d="M15 4.2V9m0 0h4.8M15 9l6-6" /> <path d="M9 4.2V9m0 0H4.2M9 9 3 3" /></svg></span><span class="tc-text"><span class="tc-title">Make image smaller</span><span class="tc-blurb">Smaller JPEG, PNG and WebP files</span></span><svg class="icon tc-go" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg></a></li><li><a class="tool-card" href="tools/images-to-pdf/" data-words="images to pdf one pdf from pictures, in order jpg to pdf image to pdf photos scan combine pictures document"><span class="tc-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11.35 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v5.35" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="M14 19h6" /> <path d="M17 16v6" /></svg></span><span class="tc-text"><span class="tc-title">Images to PDF</span><span class="tc-blurb">One PDF from pictures, in order</span></span><svg class="icon tc-go" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg></a></li><li><a class="tool-card" href="tools/shrink-pdf/" data-words="shrink pdf light or strong compression compress reduce pdf size mb email upload smaller"><span class="tc-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="M9 15h6" /></svg></span><span class="tc-text"><span class="tc-title">Shrink PDF</span><span class="tc-blurb">Light or strong compression</span></span><svg class="icon tc-go" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg></a></li><li><a class="tool-card" href="tools/remove-private-details/" data-words="remove location &amp; private details location, camera and dates, gone exif gps location metadata privacy strip remove camera date author"><span class="tc-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.75 7.09a3 3 0 0 1 2.16 2.16" /> <path d="M17.072 17.072c-1.634 2.17-3.527 3.912-4.471 4.727a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 1.432-4.568" /> <path d="m2 2 20 20" /> <path d="M8.475 2.818A8 8 0 0 1 20 10c0 1.183-.31 2.377-.81 3.533" /> <path d="M9.13 9.13a3 3 0 0 0 3.74 3.74" /></svg></span><span class="tc-text"><span class="tc-title">Remove location &amp; private details</span><span class="tc-blurb">Location, camera and dates, gone</span></span><svg class="icon tc-go" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg></a></li></ul>
+    </div>
+  </section>
+
+  <!-- Drop Island: black, like the island itself -->
+  <section class="chapter island-ch" id="island" aria-labelledby="island-h" data-inview>
+    <div class="island-pill" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="chapter-head">
+        <h2 id="island-h" class="h2">Drop Island.</h2>
+        <p class="lead">A small pill at the top of your screen. Drop files on it without opening the window.</p>
+      </div>
+      <div class="frame settle" data-video data-name="drop-island">
+        <video muted playsinline loop preload="none" aria-hidden="true" tabindex="-1"></video>
+        <p class="sr-only">Recording: a video file is dragged to the pill at the top of the screen. A wheel opens under it, GIF is picked, and the island shows progress and then the result.</p>
+        <button class="media-btn" type="button" aria-label="Pause video"><svg class="icon i-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="14" y="3" width="5" height="18" rx="1" /> <rect x="5" y="3" width="5" height="18" rx="1" /></svg><svg class="icon i-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" /></svg></button>
+      </div>
+      <ul class="facts">
+        <li><b>Drop, then pick</b>A wheel opens under the pill. Move down onto a format and let go.</li>
+        <li><b>Tools and actions too</b>Hold ⌘ or Ctrl while dragging for tools, ⌥ or Alt for file actions.</li>
+        <li><b>Progress, then results</b>The island shows progress, then Open and Show in folder.</li>
+        <li><b>Out of your way</b>On a MacBook it sits in the notch, and it moves aside for full-screen windows.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Nearby -->
+  <section class="chapter" id="nearby" aria-labelledby="nearby-h">
+    <div class="wrap">
+      <div class="chapter-head">
+        <h2 id="nearby-h" class="h2">Send to your other computer.</h2>
+        <p class="lead">Like AirDrop, between your Mac and your PC. Files go straight across your own Wi‑Fi or network, never through the internet.</p>
+      </div>
+      <div class="nearby-art" data-nearby role="img" aria-label="Illustration: a Mac sends a file to a PC. Both screens show the same 6‑digit code, the PC accepts, the file crosses with a progress bar and is saved in Downloads, DropDial.">
+        <div class="device mac" aria-hidden="true">
+          <div class="bar"><i></i><i></i><i></i></div>
+          <div class="device-name">MacBook Air</div>
+          <div class="n-row"><span class="muted">Send to</span><span class="n-btn">Studio PC</span></div>
+          <div class="stack">
+            <div class="n-code"><div class="muted">Code</div><div class="code">482 913</div></div>
+            <div class="n-prog"><div class="muted">Sending holiday.mov</div><div class="n-bar"><i></i></div></div>
+            <div class="n-saved n-done">Sent</div>
+          </div>
+        </div>
+        <div class="device pc" aria-hidden="true">
+          <div class="bar"><span>—</span><span>▢</span><span>✕</span></div>
+          <div class="device-name">Studio PC</div>
+          <div class="stack">
+            <div class="n-ask"><div class="muted">MacBook Air wants to send 1 file, 2.4 GB</div><div class="code">482 913</div><div class="n-row" style="justify-content:flex-start;gap:8px;margin-top:6px"><span class="n-btn">Decline</span><span class="n-btn primary n-accept">Accept</span></div></div>
+            <div class="n-prog"><div class="muted">Receiving holiday.mov</div><div class="n-bar"><i></i></div></div>
+            <div class="n-saved"><div class="n-done">Saved</div><div class="muted">Downloads → DropDial</div></div>
+          </div>
+        </div>
+        <div class="n-file" aria-hidden="true"><i></i>holiday.mov</div>
+        <button class="media-btn" type="button" aria-label="Pause animation"><svg class="icon i-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="14" y="3" width="5" height="18" rx="1" /> <rect x="5" y="3" width="5" height="18" rx="1" /></svg><svg class="icon i-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" /></svg></button>
+      </div>
+      <ul class="facts">
+        <li><b>Up to 10 GB per send</b>Big files go over several connections at once. On a cable or fast Wi‑Fi 6, 10 GB takes about 2 minutes.</li>
+        <li><b>Encrypted end to end</b>Both screens show the same 6‑digit code, and nothing comes in until you accept.</li>
+        <li><b>Saved, never replaced</b>Files land in Downloads → DropDial under new names.</li>
+        <li><b>Off until you turn it on</b>Nearby works only on your own network, Mac to PC and back.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section class="chapter alt" id="privacy" aria-labelledby="privacy-h">
+    <div class="wrap privacy-grid">
+      <div class="chapter-head">
+        <h2 id="privacy-h" class="h2">Your files stay on your computer.</h2>
+        <p class="lead">DropDial has no account, no cloud, no ads and no tracking.</p>
+        <a class="textlink" href="legal/">Terms &amp; Privacy<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6" /></svg></a>
+      </div>
+      <ul class="checklist">
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /></svg><span><b>Nothing is uploaded.</b> Converting, the tools and bank statements all work on your computer.</span></li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /> <path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg><span><b>A locked-down sandbox.</b> Files are opened where a damaged or harmful file can’t reach the rest of your computer.</span></li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 2h-4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8" /> <path d="M16.706 2.706A2.4 2.4 0 0 0 15 2v5a1 1 0 0 0 1 1h5a2.4 2.4 0 0 0-.706-1.706z" /> <path d="M5 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 1.732-1" /></svg><span><b>Originals never change.</b> Results are new files, and an existing file is never overwritten.</span></li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.07 4.93A10 10 0 0 0 6.99 3.34" /> <path d="M4 6h.01" /> <path d="M2.29 9.62A10 10 0 1 0 21.31 8.35" /> <path d="M16.24 7.76A6 6 0 1 0 8.23 16.67" /> <path d="M12 18h.01" /> <path d="M17.99 11.66A6 6 0 0 1 15.77 16.67" /> <circle cx="12" cy="12" r="2" /> <path d="m13.41 10.59 5.66-5.66" /></svg><span><b>Nearby is off until you turn it on.</b> It works only on your own network, and nothing comes in until you accept.</span></li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /> <circle cx="9" cy="9" r="2" /> <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span><b>Hidden details stay private.</b> Converted images drop details such as location by default.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Mac and Windows -->
+  <section class="chapter" id="platforms" aria-labelledby="platforms-h">
+    <div class="wrap">
+      <div class="chapter-head">
+        <h2 id="platforms-h" class="h2">Made for Mac and Windows.</h2>
+        <p class="lead">The same wheel, tools and Nearby on both, in each system’s own look: traffic lights and ⌘ on a Mac, window buttons and Ctrl on Windows.</p>
+      </div>
+      <div class="os-pair">
+        <figure><div class="frame settle"><img src="media/video/convert.webp" alt="DropDial on a Mac, converting three photos with the wheel" width="1920" height="1280" loading="lazy" decoding="async"></div>
+          <figcaption><b>Mac</b><span class="fine">macOS 12 or later, Apple silicon and Intel.</span></figcaption></figure>
+        <figure><div class="frame settle"><img src="media/video/convert-win.webp" alt="DropDial on Windows, converting three photos with the wheel" width="1920" height="1280" loading="lazy" decoding="async"></div>
+          <figcaption><b>Windows</b><span class="fine">Windows 10 and 11, 64-bit.</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="chapter alt" id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="chapter-head"><h2 id="faq-h" class="h2">Questions.</h2></div>
+      <div class="faq">
+        <details><summary>Is DropDial free?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" /></svg></summary><div><p>Yes. DropDial is free to use, for personal and work use.</p></div></details>
+        <details><summary>Does DropDial upload my files?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" /></svg></summary><div><p>No. Converting, the tools and bank statements all work on your computer. There are no accounts, uploads or tracking. Files go to another computer only when you send them with Nearby.</p></div></details>
+        <details><summary>Which formats can it convert?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" /></svg></summary><div><p>Images: JPEG, PNG, WebP, HEIC, TIFF, AVIF, BMP, GIF, ICO and SVG. Audio: MP3, M4A, WAV, FLAC, OGG, Opus, AIFF and WMA. Video: MP4, MOV, MKV, WebM, AVI, WMV and GIF. Documents: PDF, DOCX and TXT or Markdown. Sheets: CSV, XLSX, XLS and JSON. Subtitles: SRT and VTT.</p><p>That’s 229 conversion routes on a Mac and 221 on Windows. Audio and video use the bundled FFmpeg.</p></div></details>
+        <details><summary>Will it change my original files?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" /></svg></summary><div><p>No. Converting and the tools save new files, and an existing file is never overwritten. Only the file actions Rename… and Move to… change your files, and Rename can be undone in Activity.</p></div></details>
+        <details><summary>My Mac says it can’t check DropDial. What do I do?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" /></svg></summary><div><p>DropDial isn’t notarized by Apple yet. Open System Settings → Privacy &amp; Security, scroll down and click Open Anyway. You only need to do this once. <a href="download/#install">See the install steps</a>.</p></div></details>
+        <details><summary>How do updates work?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" /></svg></summary><div><p>DropDial looks for a new version once a day. When there is one, a bar at the top of the window offers Update, and the new version installs when you click Restart to update or quit DropDial. You can turn the check off in Settings → General.</p></div></details>
+        <details><summary>Is there an app for iPhone or Android?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" /></svg></summary><div><p>Not yet. DropDial is a desktop app for Mac and Windows, but its <a href="tools/">web tools</a> work in the browser on any phone or tablet: convert HEIC photos, make pictures smaller, combine PDFs and more.</p></div></details>
+        <details><summary>Do the web tools upload my files?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" /></svg></summary><div><p>No. The web tools run in your browser with the same code as the DropDial app. Your files are read and changed on your device and are never sent anywhere. There’s no account, and closing the page clears everything.</p></div></details>
+        <details><summary>What does Nearby sharing need?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" /></svg></summary><div><p>DropDial on both computers, Nearby sharing turned on in each, and the same Wi‑Fi or network. Sends up to 10 GB need DropDial 1.2.2 or later on both; an older version accepts up to 1 GB.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing -->
+  <section class="chapter" aria-labelledby="get-h">
+    <div class="wrap closing">
+      <svg class="mini-wheel" viewBox="0 0 440 440" aria-hidden="true"><defs><linearGradient id="mgGlass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--glass-a)"/><stop offset="1" style="stop-color:var(--glass-b)"/></linearGradient><linearGradient id="mgHot" x1="0.1" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#ffab66"/><stop offset="0.45" stop-color="#ff6a12"/><stop offset="1" stop-color="#e94f00"/></linearGradient></defs><circle cx="220" cy="220" r="86" fill="url(#mgGlass)" stroke="var(--glass-edge)"/><path d="M 143.38 28.78 A 206 206 0 0 1 296.62 28.78 Q 304.90 32.31 301.19 40.51 L 264.10 122.51 Q 260.39 130.71 252.03 127.38 A 98 98 0 0 0 187.97 127.38 Q 179.61 130.71 175.90 122.51 L 138.81 40.51 Q 135.10 32.31 143.38 28.78 Z" fill="url(#mgGlass)" stroke="var(--glass-edge)"/><path d="M 321.73 40.87 A 206 206 0 0 1 417.27 160.68 Q 419.68 169.35 410.95 171.57 L 323.72 193.69 Q 314.99 195.91 312.38 187.30 A 98 98 0 0 0 272.44 137.21 Q 264.63 132.75 268.73 124.74 L 309.71 44.61 Q 313.81 36.60 321.73 40.87 Z" fill="url(#mgHot)" stroke="var(--glass-edge)"/><path d="M 423.48 187.85 A 206 206 0 0 1 389.38 337.25 Q 384.09 344.54 376.92 339.10 L 305.23 284.69 Q 298.06 279.25 303.17 271.84 A 98 98 0 0 0 317.42 209.38 Q 316.04 200.49 324.86 198.70 L 413.06 180.79 Q 421.88 178.99 423.48 187.85 Z" fill="url(#mgGlass)" stroke="var(--glass-edge)"/><path d="M 372.00 359.04 A 206 206 0 0 1 233.93 425.53 Q 224.94 425.94 224.73 416.94 L 222.57 326.97 Q 222.35 317.97 231.33 317.34 A 98 98 0 0 0 289.04 289.55 Q 295.13 282.92 302.03 288.70 L 371.03 346.49 Q 377.93 352.27 372.00 359.04 Z" fill="url(#mgGlass)" stroke="var(--glass-edge)"/><path d="M 206.07 425.53 A 206 206 0 0 1 68.00 359.04 Q 62.07 352.27 68.97 346.49 L 137.97 288.70 Q 144.87 282.92 150.96 289.55 A 98 98 0 0 0 208.67 317.34 Q 217.65 317.97 217.43 326.97 L 215.27 416.94 Q 215.06 425.94 206.07 425.53 Z" fill="url(#mgGlass)" stroke="var(--glass-edge)"/><path d="M 50.62 337.25 A 206 206 0 0 1 16.52 187.85 Q 18.12 178.99 26.94 180.79 L 115.14 198.70 Q 123.96 200.49 122.58 209.38 A 98 98 0 0 0 136.83 271.84 Q 141.94 279.25 134.77 284.69 L 63.08 339.10 Q 55.91 344.54 50.62 337.25 Z" fill="url(#mgGlass)" stroke="var(--glass-edge)"/><path d="M 22.73 160.68 A 206 206 0 0 1 118.27 40.87 Q 126.19 36.60 130.29 44.61 L 171.27 124.74 Q 175.37 132.75 167.56 137.21 A 98 98 0 0 0 127.62 187.30 Q 125.01 195.91 116.28 193.69 L 29.05 171.57 Q 20.32 169.35 22.73 160.68 Z" fill="url(#mgGlass)" stroke="var(--glass-edge)"/></svg>
+      <h2 id="get-h" class="h2">Get DropDial.</h2>
+      <p class="lead">Free for Mac and Windows.</p>
+      <a class="btn btn-primary" href="download/" data-magnetic><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg><span class="for-mac">Download for Mac</span><span class="for-win">Download for Windows</span><span class="for-mobile">Get it for your computer</span><span class="for-other">Download DropDial</span></a>
+    </div>
+  </section>
+</main>
+<footer class="site-foot">
+  <div class="wrap foot-inner">
+    <p class="copy">© 2026 Yash Gupta. All rights reserved.</p>
+    <ul class="foot-links">
+      <li><a href="download/">Download</a></li>
+      <li><a href="guide/">Guide</a></li>
+      <li><a href="tools/">Web tools</a></li>
+      <li><a href="legal/">Terms &amp; Privacy</a></li>
+      <li><a href="https://github.com/unknown8575/DropDial-Releases/releases" rel="noopener">Releases on GitHub</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
