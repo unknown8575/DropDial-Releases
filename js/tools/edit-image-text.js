@@ -431,7 +431,7 @@ const styleOpt = () => st.mode === 'add' || !!st.sel;
 tool({
   againLabel: 'Back to the picture',
   kinds: ['jpg', 'png', 'webp', 'heic', 'pdf'], multiple: false,
-  wrongKind: (f) => `${f.name} isn’t a picture or PDF this tool reads. Use a PNG, JPEG, WebP or HEIC picture, or a scanned PDF.`,
+  wrongKind: (f) => (f.format === 'docx' ? `${f.name} is a Word document: its words are real text, so change them with Edit Word text.` : `${f.name} isn’t a picture or PDF this tool reads. Use a PNG, JPEG, WebP or HEIC picture, or a scanned PDF.`),
   pick: 'Choose a picture or PDF', drop: 'A photo, screenshot or scanned PDF: PNG, JPEG, WebP, HEIC or PDF. Its text is read in this browser.',
   inspect: (f) => (f.format === 'pdf' ? inspectPdf(f) : null),
   metaLine: (f) => [f.locked ? 'Locked' : ''],

@@ -374,6 +374,7 @@ const styleOpt = (o) => st.mode === 'add' || !!st.sel;
 tool({
   againLabel: 'Back to the page',
   ...PDF_ACCEPT, multiple: false,
+  wrongKind: (f) => (f.format === 'docx' ? `${f.name} is a Word document: change its words with Edit Word text.` : `${f.name} isn’t a PDF.`),
   pick: 'Choose a PDF', drop: 'One PDF. You can change its text, replace words and add text.',
   inspect: (f) => inspectPdf(f),
   metaLine: (f) => [f.locked ? 'Locked' : ''],

@@ -339,6 +339,8 @@ const TOOLS = [
   tool('pdfNumbers', 'Page numbers', 'list-ordered', 'pdf', 'any', ['pdf']),
   tool('pdfWatermark', 'Watermark', 'stamp', 'pdf', 'any', ['pdf']),
   tool('pdfEditText', 'Edit PDF text', 'text-cursor-input', 'pdf', 'single', ['pdf']),
+  // Word documents (.docx): change words in place; everything else in the file is kept as it was.
+  tool('docxEditText', 'Edit Word text', 'file-pen-line', 'doc', 'single', ['docx']),
   tool('analyzeStatement', 'Analyze bank statement', 'chart-pie', 'money', 'any', ['pdf', 'csv', 'xlsx', 'xls']),
   // Make smaller works on images and PDFs without FFmpeg; its window explains which files need it.
   // `nothingFor`: formats the tool only skips; it is dimmed, with the reason, when every chosen file is one of them.

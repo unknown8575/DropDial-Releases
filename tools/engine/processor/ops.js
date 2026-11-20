@@ -7,6 +7,7 @@ import * as photo from './photo.js';
 import * as pdfTools from './pdf-tools.js';
 import * as pdfEdit from './pdf-edit.js';
 import * as imageText from './image-text.js';
+import * as docxEdit from './docx-edit.js';
 import * as audio from './audio.js';
 import * as any from './anyfile.js';
 import * as table from './table.js';
@@ -62,4 +63,6 @@ export const OPS = {
   'docx.read': docx.read,
   'docx.fromText': docx.fromText,
   'docx.fromMarkdown': docx.fromMarkdown,
+  'docx.editScan': docxEdit.scan,
+  'docx.editSave': docxEdit.save,
 };
