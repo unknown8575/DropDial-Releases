@@ -157,6 +157,18 @@ A small pill at the top of your screen; on a MacBook it sits in the notch. Drag 
 
 ## Download
 
+### Mac: install with Terminal <sub>(recommended)</sub>
+
+Open **Terminal** (press <kbd>⌘</kbd> <kbd>Space</kbd>, type *Terminal*, press <kbd>Return</kbd>), paste this line and press <kbd>Return</kbd>:
+
+```bash
+curl -fsSL https://unknown8575.github.io/DropDial-Releases/install.sh | bash
+```
+
+It picks the right version for your Mac (Apple silicon or Intel), checks the download's fingerprint, puts DropDial in Applications and opens it, with no security prompt. Run it again any time to reinstall. [Read the installer](https://unknown8575.github.io/DropDial-Releases/install.sh).
+
+### Or download the app
+
 The [download page](https://unknown8575.github.io/DropDial-Releases/download/) picks the right file for you. Or take it from the [latest release](https://github.com/unknown8575/DropDial-Releases/releases/latest):
 
 | Your computer | File | Needs |
@@ -168,7 +180,7 @@ The [download page](https://unknown8575.github.io/DropDial-Releases/download/) p
 <sub>Not sure which Mac you have? Apple menu → About This Mac: Apple silicon shows a <b>Chip</b> (M1, M2…), Intel shows a <b>Processor</b>.</sub>
 
 <details>
-<summary><b>Install on a Mac</b></summary>
+<summary><b>Install on a Mac from the .zip</b></summary>
 <br>
 
 1. Open the downloaded `.zip`. DropDial appears next to it.
