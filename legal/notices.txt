@@ -11,6 +11,10 @@ license texts are in this folder.
 | FFmpeg (static build) | 6.1.x / 7.0.x | GPL-3.0 build (see `GPL-3.0.txt` and FFmpeg-*-build.txt) | Audio and video engine; runs as a separate program |
 | pdf.js (pdfjs-dist) | 6.4.299 | Apache-2.0 | PDF rendering and text extraction |
 | pdf-lib | 1.17.1 | MIT | PDF creation, merge, split, metadata |
+| @pdf-lib/fontkit | 1.1.1 | MIT (see `pdf-lib-fontkit.txt`; two small fixes listed there) | Embedding fonts (as subsets) for Edit PDF text; glyph shapes for Edit image text |
+| Noto Sans, Noto Serif, Noto Sans Mono, Noto Sans Devanagari | 2022 releases, from @expo-google-fonts 0.4.2 | SIL Open Font License 1.1 (see `noto-fonts.txt`) | Fonts written into PDFs by Edit PDF text and drawn into pictures by Edit image text |
+| Tesseract.js, tesseract.js-core (Tesseract 5, Leptonica, libjpeg, libpng, zlib, libtiff in WebAssembly) | 7.0.0 | Apache-2.0; bundled parts MIT, BSD, IJG, libpng, zlib, libtiff licenses (see `tesseract-js.txt`) | Reading text in pictures for Edit image text, on the device; CDN fallbacks removed when copied |
+| Tesseract language data, English and Hindi (tessdata_best, integer, "4.0.0_best_int") | @tesseract.js-data/eng and /hin 1.0.0 | Apache-2.0 (npm packaging MIT; see `tessdata.txt`) | Language models for Edit image text |
 | JSZip | 3.10.2 | MIT (dual MIT / GPL-3.0) | DOCX reading and writing |
 | libheif-js (libheif, libde265) | 1.23.5 | LGPL-3.0 | HEIC decoding |
 | UTIF | 4.1.0 (utif2) | MIT | TIFF decoding and encoding |
@@ -18,6 +22,8 @@ license texts are in this folder.
 | gifenc | 1.0.3 | MIT | GIF encoding and palette quantization |
 | jsQR | 1.4.0 | Apache-2.0 | QR code reading |
 | @noble/ciphers (ChaCha20-Poly1305 only) | 2.4.0 | MIT (see `noble-ciphers.txt`) | Encryption on the Send from Phone page; vendored in `src/phone/vendor/noble-ciphers` from the npm package (sha512 `AnjFn0Jv92laAkvMrghlFZq4qQCIN/4DxFV/eooqtC2YTjB7kBeLMS2T9KJX4Dn+ZVXLOwK0lSgqDtx9gvxtiw==`) |
+| @noble/curves (X25519 only: `utils.js`, `abstract/curve.js`, `abstract/modular.js`, `abstract/montgomery.js`) | 2.4.0 | MIT (see `noble-curves.txt`) | Key exchange on the Send from Phone page; vendored in `src/phone/vendor/noble-curves` from the npm package (sha512 `P4/62zrgfH33CneE3Dn4WhJVA22YUU0eR51wKIan4NVRvwsA0YnPTwWGpNbpuacSujmSFLvyzpyuR30+fbq2Ew==`); only change: the `@noble/hashes/utils.js` import points to the vendored copy |
+| @noble/hashes (SHA-256, HMAC, HKDF: `utils.js`, `sha2.js`, `_md.js`, `_u64.js`, `hmac.js`, `hkdf.js`) | 2.4.0 | MIT (see `noble-hashes.txt`) | Key derivation on the Send from Phone page; vendored in `src/phone/vendor/noble-hashes` from the npm package (sha512 `X5XaVWZIBCT7HHZGm5I7ZQXDwLG+bGXuSrMQAW+7Zvl87h1kmc1ZB1VSRJcpUfoUrGQp4Fkoxm5kZ+Ms+aW+eA==`) |
 | Papa Parse | 5.7.0 | MIT | Reading CSV bank statements |
 | Preact | 10.29.8 | MIT | Interface rendering |
 | htm | 3.1.1 | Apache-2.0 | Interface templates |

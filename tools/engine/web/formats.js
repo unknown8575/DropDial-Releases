@@ -316,6 +316,8 @@ const TOOLS = [
   tool('imagesToPdf', 'Images to PDF', 'file-plus-2', 'image', 'any', ['image']),
   tool('photoCollage', 'Collage', 'layout-grid', 'image', 'multiple', ['still']),
   tool('readQR', 'Read QR code', 'qr-code', 'image', 'single', ['still']),
+  // Pictures of text: photos, screenshots and scanned PDFs (its window says which PDF pages are real text).
+  tool('imageEditText', 'Edit image text', 'scan-text', 'image', 'single', ['jpg', 'png', 'webp', 'heic', 'pdf']),
   tool('videoTrim', 'Trim video', 'scissors', 'video', 'single', ['video']),
   tool('videoReframe', 'Crop & reframe', 'crop', 'video', 'single', ['video']),
   tool('videoSpeed', 'Change speed', 'gauge', 'video', 'single', ['video']),
@@ -336,6 +338,7 @@ const TOOLS = [
   tool('pdfShrink', 'Shrink PDF', 'file-minus', 'pdf', 'any', ['pdf']),
   tool('pdfNumbers', 'Page numbers', 'list-ordered', 'pdf', 'any', ['pdf']),
   tool('pdfWatermark', 'Watermark', 'stamp', 'pdf', 'any', ['pdf']),
+  tool('pdfEditText', 'Edit PDF text', 'text-cursor-input', 'pdf', 'single', ['pdf']),
   tool('analyzeStatement', 'Analyze bank statement', 'chart-pie', 'money', 'any', ['pdf', 'csv', 'xlsx', 'xls']),
   // Make smaller works on images and PDFs without FFmpeg; its window explains which files need it.
   // `nothingFor`: formats the tool only skips; it is dimmed, with the reason, when every chosen file is one of them.

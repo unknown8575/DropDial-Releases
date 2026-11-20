@@ -8,7 +8,8 @@ import { sniff } from '../processor/image-header.js';
 export const LIMITS = Object.freeze({ mp: 250, side: 30000, pages: 2000 });
 
 // pdf.js drawing and text; docx.read needs DOMParser, which workers don't have.
-const PDFJS = new Set(['pdf.info', 'pdf.render', 'pdf.text', 'pdf.toDocx', 'pdf.layout', 'docx.read']);
+// Edit image text runs here too: it draws scanned pages with pdf.js, and its reader (Tesseract.js) starts its own worker.
+const PDFJS = new Set(['pdf.info', 'pdf.render', 'pdf.text', 'pdf.toDocx', 'pdf.layout', 'docx.read', 'pdf.editScan', 'pdf.editPreview', 'pdf.editSave', 'imageText.scan', 'imageText.preview', 'imageText.save']);
 function onPage(op, a) {
   if (PDFJS.has(op)) return true;
   if (op === 'pdf.shrink') return !!(a.o && (a.o.level === 'strong' || a.o.targetBytes > 0 || a.o.keepText));

@@ -13,7 +13,7 @@ const load = (name) => { if (!libs.has(name)) libs.set(name, import(`./lib/${nam
 async function need(op) {
   await load('pako'); // UTIF reads self.pako when it loads, so pako comes first
   await load('utif');
-  if (/^(pdf\.|image\.toPdf|meta\.pdf)/.test(op)) await load('pdf-lib');
+  if (/^(pdf\.|image\.toPdf|meta\.pdf|imageText\.)/.test(op)) await load('pdf-lib');
   if (/^(docx\.|table\.|image\.toDocx|pdf\.toDocx|web\.zip)/.test(op)) await load('jszip');
   if (op === 'qr.read') await load('jsqr');
 }

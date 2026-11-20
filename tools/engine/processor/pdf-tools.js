@@ -75,7 +75,7 @@ function cutPageLinks(doc) {
 }
 
 /** Drop every object the document no longer reaches from its catalog or info. Returns how many were dropped. */
-function prune(doc) {
+export function prune(doc) {
   const { PDFRef, PDFDict, PDFArray, PDFStream } = lib();
   const ctx = doc.context;
   const seen = new Set();

@@ -5,6 +5,8 @@ import * as pdf from './pdf.js';
 import * as docx from './docx.js';
 import * as photo from './photo.js';
 import * as pdfTools from './pdf-tools.js';
+import * as pdfEdit from './pdf-edit.js';
+import * as imageText from './image-text.js';
 import * as audio from './audio.js';
 import * as any from './anyfile.js';
 import * as table from './table.js';
@@ -45,6 +47,12 @@ export const OPS = {
   'pdf.tidySize': pdfTools.tidySize,
   'pdf.numbers': pdfTools.numbers,
   'pdf.watermark': pdfTools.watermark,
+  'pdf.editScan': pdfEdit.scan,
+  'pdf.editPreview': pdfEdit.preview,
+  'pdf.editSave': pdfEdit.save,
+  'imageText.scan': imageText.scan,
+  'imageText.preview': imageText.preview,
+  'imageText.save': imageText.save,
   'audio.look': audio.look,
   'shrink.image': any.shrinkImage,
   'meta.image': any.imageMeta,
