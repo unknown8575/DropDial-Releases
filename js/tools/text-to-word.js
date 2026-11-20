@@ -1,23 +1,2 @@
-// Text to Word: the app's TXT/Markdown → DOCX route (src/main/conversions.js ENGINES['text-docx']): Markdown is laid
-// out by the app's own parser (src/main/engines/markdown.js toParagraphs) and written by the processor's
-// docx.fromMarkdown; plain text by docx.fromText.
-import { tool, engine, plural, UserError, decodeText } from './ui.js';
-import MD from '../../tools/engine/web/markdown.js';
-import { paper } from './pdfkit.js';
-
-tool({
-  kinds: ['txt'], wrongKind: (f) => `${f.name} isn’t a text or Markdown file.`, multiple: true, max: 50,
-  pick: 'Choose text files', drop: 'Plain text (.txt) or Markdown (.md) files.',
-  verb: 'Writing',
-  action: (files) => `Save ${files.length === 1 ? 'as Word' : plural(files.length, 'file') + ' as Word'}`,
-  zipName: () => 'Word documents.zip',
-  showSaving: false,
-  async run(f, o, job) {
-    const text = decodeText(await job.bytes());
-    if (!text.trim()) throw new UserError('This file is empty.');
-    const r = MD.isMarkdownName(f.name)
-      ? await engine.run('docx.fromMarkdown', { paragraphs: MD.toParagraphs(text), paper: paper() }, job)
-      : await engine.run('docx.fromText', { text, paper: paper() }, job);
-    return { outputs: [{ name: job.name(f.stem, 'docx'), bytes: r.bytes }], note: MD.isMarkdownName(f.name) ? 'headings, lists and tables laid out' : '' };
-  },
-});
+/*! DropDial 1.5.0 · © 2026 Yash Gupta. All rights reserved. https://unknown8575.github.io/DropDial-Releases/ */
+var d=Object.defineProperty;var a=(t,n)=>d(t,"name",{value:n,configurable:!0});import{tool as p,engine as i,plural as l,UserError as w,decodeText as x}from"./ui.js";import o from"../../tools/engine/web/markdown.js";import{paper as s}from"./pdfkit.js";p({kinds:["txt"],wrongKind:a(t=>`${t.name} isn’t a text or Markdown file.`,"wrongKind"),multiple:!0,max:50,pick:"Choose text files",drop:"Plain text (.txt) or Markdown (.md) files.",verb:"Writing",action:a(t=>`Save ${t.length===1?"as Word":l(t.length,"file")+" as Word"}`,"action"),zipName:a(()=>"Word documents.zip","zipName"),showSaving:!1,async run(t,n,e){const r=x(await e.bytes());if(!r.trim())throw new w("This file is empty.");const m=o.isMarkdownName(t.name)?await i.run("docx.fromMarkdown",{paragraphs:o.toParagraphs(r),paper:s()},e):await i.run("docx.fromText",{text:r,paper:s()},e);return{outputs:[{name:e.name(t.stem,"docx"),bytes:m.bytes}],note:o.isMarkdownName(t.name)?"headings, lists and tables laid out":""}}});

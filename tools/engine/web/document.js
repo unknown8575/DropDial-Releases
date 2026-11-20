@@ -1,20 +1,6 @@
-// decodeText() and blocksToText() from src/main/engines/document.js (copied by website/build.mjs).
-export function decodeText(b) {
-  if (b[0] === 0xff && b[1] === 0xfe) return new TextDecoder('utf-16le').decode(b.subarray(2));
-  if (b[0] === 0xfe && b[1] === 0xff) return new TextDecoder('utf-16be').decode(b.subarray(2));
-  if (b[0] === 0xef && b[1] === 0xbb && b[2] === 0xbf) b = b.subarray(3);
-  try { return new TextDecoder('utf-8', { fatal: true }).decode(b); } catch { return new TextDecoder('windows-1252').decode(b); }
-}
+/*! DropDial 1.5.0 · © 2026 Yash Gupta. All rights reserved. https://unknown8575.github.io/DropDial-Releases/ */
+var d=Object.defineProperty;var o=(e,t)=>d(e,"name",{value:t,configurable:!0});export function decodeText(e){if(e[0]===255&&e[1]===254)return new TextDecoder("utf-16le").decode(e.subarray(2));if(e[0]===254&&e[1]===255)return new TextDecoder("utf-16be").decode(e.subarray(2));e[0]===239&&e[1]===187&&e[2]===191&&(e=e.subarray(3));try{return new TextDecoder("utf-8",{fatal:!0}).decode(e)}catch{return new TextDecoder("windows-1252").decode(e)}}o(decodeText,"decodeText");export function blocksToText(e){const t=o(r=>Array.isArray(r)?r.map(c=>c.text||"").join(""):"","text"),n=[];let f=0;for(const r of e)if(f=r.type==="li"&&r.ordered?f+1:0,r.type==="h"||r.type==="p")n.push(t(r.runs));else if(r.type==="li")n.push((r.ordered?`${f}. `:"• ")+t(r.runs));else if(r.type==="table")for(const c of r.rows||[])n.push(c.map(s=>String(s).replace(/\s*\n\s*/g," ")).join("	"));return n.join(`
+`).replace(/\n{3,}/g,`
 
-export function blocksToText(blocks) {
-  const text = (runs) => (Array.isArray(runs) ? runs.map((r) => r.text || '').join('') : '');
-  const lines = [];
-  let n = 0;
-  for (const b of blocks) {
-    n = b.type === 'li' && b.ordered ? n + 1 : 0;
-    if (b.type === 'h' || b.type === 'p') lines.push(text(b.runs));
-    else if (b.type === 'li') lines.push((b.ordered ? `${n}. ` : '• ') + text(b.runs));
-    else if (b.type === 'table') for (const row of b.rows || []) lines.push(row.map((c) => String(c).replace(/\s*\n\s*/g, ' ')).join('\t'));
-  }
-  return lines.join('\n').replace(/\n{3,}/g, '\n\n').trim() + '\n';
-}
+`).trim()+`
+`}o(blocksToText,"blocksToText");

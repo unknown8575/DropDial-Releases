@@ -1,25 +1,2 @@
-// Web tools hub: filters the tool cards as you type (titles, blurbs and a few extra words per tool).
-const input = document.getElementById('tool-search');
-const cards = [...document.querySelectorAll('.hub-groups .tool-card')];
-const groups = [...document.querySelectorAll('.hub-groups .tool-group')];
-const empty = document.getElementById('hub-empty');
-const status = document.getElementById('hub-status');
-
-function filter() {
-  const words = input.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
-  let shown = 0;
-  for (const a of cards) {
-    const hit = words.every((w) => a.dataset.words.includes(w));
-    a.parentElement.hidden = !hit;
-    if (hit) shown++;
-  }
-  for (const g of groups) g.hidden = !g.querySelector('li:not([hidden])');
-  empty.hidden = shown > 0;
-  status.textContent = words.length ? `${shown} ${shown === 1 ? 'tool' : 'tools'} found` : '';
-}
-input.addEventListener('input', filter);
-input.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') { const first = cards.find((a) => !a.parentElement.hidden); if (first && input.value.trim()) first.click(); }
-  if (e.key === 'Escape') { input.value = ''; filter(); }
-});
-if (input.value) filter();
+/*! DropDial 1.5.0 · © 2026 Yash Gupta. All rights reserved. https://unknown8575.github.io/DropDial-Releases/ */
+var l=Object.defineProperty;var s=(t,e)=>l(t,"name",{value:e,configurable:!0});const input=document.getElementById("tool-search"),cards=[...document.querySelectorAll(".hub-groups .tool-card")],groups=[...document.querySelectorAll(".hub-groups .tool-group")],empty=document.getElementById("hub-empty"),status=document.getElementById("hub-status");function filter(){const t=input.value.toLowerCase().trim().split(/\s+/).filter(Boolean);let e=0;for(const o of cards){const n=t.every(d=>o.dataset.words.includes(d));o.parentElement.hidden=!n,n&&e++}for(const o of groups)o.hidden=!o.querySelector("li:not([hidden])");empty.hidden=e>0,status.textContent=t.length?`${e} ${e===1?"tool":"tools"} found`:""}s(filter,"filter"),input.addEventListener("input",filter),input.addEventListener("keydown",t=>{if(t.key==="Enter"){const e=cards.find(o=>!o.parentElement.hidden);e&&input.value.trim()&&e.click()}t.key==="Escape"&&(input.value="",filter())}),input.value&&filter();

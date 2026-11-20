@@ -1,14 +1,2 @@
-// The web tools' worker: one operation at a time, file bytes handed over (not copied) both ways.
-import { run, buffers } from './host.js';
-
-self.addEventListener('message', async (ev) => {
-  const m = ev.data;
-  if (!m || m.dd !== 1) return; // pdf.js, if it is ever loaded here, talks on the same channel
-  const res = await run(m.op, m.args);
-  let transfer = [];
-  if (res.ok) transfer = [...buffers(res.result)];
-  try { self.postMessage({ dd: 1, id: m.id, ...res }, transfer); } catch (e) {
-    self.postMessage({ dd: 1, id: m.id, ok: false, error: { message: 'The result could not be returned: ' + e.message, user: false } });
-  }
-});
-self.postMessage({ dd: 1, ready: true });
+/*! DropDial 1.5.0 · © 2026 Yash Gupta. All rights reserved. https://unknown8575.github.io/DropDial-Releases/ */
+import{run as d,buffers as o}from"./host.js";self.addEventListener("message",async t=>{const e=t.data;if(!e||e.dd!==1)return;const s=await d(e.op,e.args);let r=[];s.ok&&(r=[...o(s.result)]);try{self.postMessage({dd:1,id:e.id,...s},r)}catch(a){self.postMessage({dd:1,id:e.id,ok:!1,error:{message:"The result could not be returned: "+a.message,user:!1}})}}),self.postMessage({dd:1,ready:!0});

@@ -1,19 +1,2 @@
-// Word to text: the app's DOCX → TXT route (src/main/conversions.js ENGINES['docx-text']): the processor's docx.read
-// and the document engine's blocksToText (copied from src/main/engines/document.js by the site build).
-import { tool, engine, plural, UserError } from './ui.js';
-import { blocksToText } from '../../tools/engine/web/document.js';
-
-tool({
-  kinds: ['docx'], wrongKind: (f) => `${f.name} isn’t a Word document (.docx).`, multiple: true, max: 50,
-  pick: 'Choose Word documents', drop: 'Word documents (.docx). Older .doc files aren’t supported.',
-  verb: 'Reading',
-  action: (files) => `Save ${files.length === 1 ? 'as text' : plural(files.length, 'document') + ' as text'}`,
-  zipName: () => 'Text files.zip',
-  showSaving: false,
-  async run(f, o, job) {
-    const { blocks } = await engine.run('docx.read', { bytes: await job.bytes(), images: false }, job);
-    const text = blocksToText(Array.isArray(blocks) ? blocks : []);
-    if (!text.trim()) throw new UserError('This document has no text.');
-    return { outputs: [{ name: job.name(f.stem, 'txt'), bytes: new TextEncoder().encode(text), type: 'text/plain;charset=utf-8' }] };
-  },
-});
+/*! DropDial 1.5.0 · © 2026 Yash Gupta. All rights reserved. https://unknown8575.github.io/DropDial-Releases/ */
+var s=Object.defineProperty;var t=(e,n)=>s(e,"name",{value:n,configurable:!0});import{tool as d,engine as i,plural as c,UserError as m}from"./ui.js";import{blocksToText as u}from"../../tools/engine/web/document.js";d({kinds:["docx"],wrongKind:t(e=>`${e.name} isn’t a Word document (.docx).`,"wrongKind"),multiple:!0,max:50,pick:"Choose Word documents",drop:"Word documents (.docx). Older .doc files aren’t supported.",verb:"Reading",action:t(e=>`Save ${e.length===1?"as text":c(e.length,"document")+" as text"}`,"action"),zipName:t(()=>"Text files.zip","zipName"),showSaving:!1,async run(e,n,o){const{blocks:r}=await i.run("docx.read",{bytes:await o.bytes(),images:!1},o),a=u(Array.isArray(r)?r:[]);if(!a.trim())throw new m("This document has no text.");return{outputs:[{name:o.name(e.stem,"txt"),bytes:new TextEncoder().encode(a),type:"text/plain;charset=utf-8"}]}}});
